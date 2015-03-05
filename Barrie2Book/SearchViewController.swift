@@ -61,7 +61,7 @@ extension SearchViewController: UISearchBarDelegate {
     }
 }
 
-//MARK: - Table
+//MARK: - Table Data
 extension SearchViewController: UITableViewDataSource {
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 3
@@ -81,3 +81,16 @@ extension SearchViewController: UITableViewDataSource {
         }        
     }
 }
+
+//MARK: - Table Delegate
+extension SearchViewController: UITableViewDelegate {
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        tableView.deselectRowAtIndexPath(indexPath, animated: true)
+    }
+    
+    func tableView(tableView: UITableView, willSelectRowAtIndexPath indexPath: NSIndexPath) -> NSIndexPath? {
+            return indexPath
+
+    }
+}
+

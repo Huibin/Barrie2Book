@@ -75,6 +75,7 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <outlet property="dataSource" destination="uz1-bx-P2b" id="4vR-lv-FUu"/>
+                                    <outlet property="delegate" destination="uz1-bx-P2b" id="toU-XQ-qrn"/>
                                 </connections>
                             </tableView>
                             <searchBar contentMode="redraw" placeholder="book title, author" translatesAutoresizingMaskIntoConstraints="NO" id="jJo-QW-u9x">

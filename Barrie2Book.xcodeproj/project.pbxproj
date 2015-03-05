@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		F8775C231AA8B7E2009BD8EC /* NothingFoundCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F8775C221AA8B7E2009BD8EC /* NothingFoundCell.xib */; };
+		F8775C271AA8CFC6009BD8EC /* Books.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8775C261AA8CFC6009BD8EC /* Books.swift */; };
+		F8775C291AA8CFEF009BD8EC /* Owners.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8775C281AA8CFEF009BD8EC /* Owners.swift */; };
 		F8901BC21AA792AC009D0790 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8901BC11AA792AC009D0790 /* AppDelegate.swift */; };
 		F8901BC71AA792AC009D0790 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F8901BC51AA792AC009D0790 /* Main.storyboard */; };
 		F8901BC91AA792AC009D0790 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F8901BC81AA792AC009D0790 /* Images.xcassets */; };
@@ -31,6 +33,8 @@
 
 /* Begin PBXFileReference section */
 		F8775C221AA8B7E2009BD8EC /* NothingFoundCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NothingFoundCell.xib; sourceTree = "<group>"; };
+		F8775C261AA8CFC6009BD8EC /* Books.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Books.swift; sourceTree = "<group>"; };
+		F8775C281AA8CFEF009BD8EC /* Owners.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Owners.swift; sourceTree = "<group>"; };
 		F8901BBC1AA792AC009D0790 /* Barrie2Book.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Barrie2Book.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8901BC01AA792AC009D0790 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F8901BC11AA792AC009D0790 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -143,6 +147,8 @@
 		F8901BE31AA7933D009D0790 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				F8775C261AA8CFC6009BD8EC /* Books.swift */,
+				F8775C281AA8CFEF009BD8EC /* Owners.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -269,7 +275,9 @@
 				F8901BEB1AA793AA009D0790 /* SearchViewController.swift in Sources */,
 				F8901C1B1AA7F895009D0790 /* UserViewController.swift in Sources */,
 				F8901C211AA803ED009D0790 /* SearchResultCell.swift in Sources */,
+				F8775C291AA8CFEF009BD8EC /* Owners.swift in Sources */,
 				F8901BC21AA792AC009D0790 /* AppDelegate.swift in Sources */,
+				F8775C271AA8CFC6009BD8EC /* Books.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
