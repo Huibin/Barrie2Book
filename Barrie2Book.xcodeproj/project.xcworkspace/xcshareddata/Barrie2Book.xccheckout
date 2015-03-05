@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>29899A67-3BB4-43C6-B1B2-D49FA8A3BC89</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Barrie2Book</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>96905FE1D76418AC43C76A37D4EAF2DDF1909CFD</key>
+		<string>https://github.com/Huibin/Barrie2Book.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Barrie2Book.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>96905FE1D76418AC43C76A37D4EAF2DDF1909CFD</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/Huibin/Barrie2Book.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>96905FE1D76418AC43C76A37D4EAF2DDF1909CFD</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>96905FE1D76418AC43C76A37D4EAF2DDF1909CFD</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Barrie2Book</string>
+		</dict>
+	</array>
+</dict>
+</plist>

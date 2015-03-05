@@ -13,6 +13,7 @@
 		F8901BCC1AA792AC009D0790 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = F8901BCA1AA792AC009D0790 /* LaunchScreen.xib */; };
 		F8901BD81AA792AD009D0790 /* Barrie2BookTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8901BD71AA792AD009D0790 /* Barrie2BookTests.swift */; };
 		F8901BEB1AA793AA009D0790 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8901BEA1AA793AA009D0790 /* SearchViewController.swift */; };
+		F8901C1B1AA7F895009D0790 /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8901C1A1AA7F895009D0790 /* UserViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		F8901BD61AA792AD009D0790 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F8901BD71AA792AD009D0790 /* Barrie2BookTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Barrie2BookTests.swift; sourceTree = "<group>"; };
 		F8901BEA1AA793AA009D0790 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		F8901C1A1AA7F895009D0790 /* UserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,7 +126,8 @@
 			isa = PBXGroup;
 			children = (
 				F8901BC11AA792AC009D0790 /* AppDelegate.swift */,
-				F8901BEA1AA793AA009D0790 /* SearchViewController.swift */,
+				F8901C1C1AA7F8A2009D0790 /* Trade */,
+				F8901C1D1AA7F8B0009D0790 /* User */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -134,6 +137,22 @@
 			children = (
 			);
 			name = Models;
+			sourceTree = "<group>";
+		};
+		F8901C1C1AA7F8A2009D0790 /* Trade */ = {
+			isa = PBXGroup;
+			children = (
+				F8901BEA1AA793AA009D0790 /* SearchViewController.swift */,
+			);
+			name = Trade;
+			sourceTree = "<group>";
+		};
+		F8901C1D1AA7F8B0009D0790 /* User */ = {
+			isa = PBXGroup;
+			children = (
+				F8901C1A1AA7F895009D0790 /* UserViewController.swift */,
+			);
+			name = User;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -237,6 +256,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F8901BEB1AA793AA009D0790 /* SearchViewController.swift in Sources */,
+				F8901C1B1AA7F895009D0790 /* UserViewController.swift in Sources */,
 				F8901BC21AA792AC009D0790 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -429,6 +449,7 @@
 				F8901BDD1AA792AD009D0790 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F8901BDE1AA792AD009D0790 /* Build configuration list for PBXNativeTarget "Barrie2BookTests" */ = {
 			isa = XCConfigurationList;
@@ -437,6 +458,7 @@
 				F8901BE01AA792AD009D0790 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
