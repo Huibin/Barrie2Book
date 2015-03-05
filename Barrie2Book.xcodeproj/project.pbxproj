@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F8775C231AA8B7E2009BD8EC /* NothingFoundCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F8775C221AA8B7E2009BD8EC /* NothingFoundCell.xib */; };
 		F8901BC21AA792AC009D0790 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8901BC11AA792AC009D0790 /* AppDelegate.swift */; };
 		F8901BC71AA792AC009D0790 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F8901BC51AA792AC009D0790 /* Main.storyboard */; };
 		F8901BC91AA792AC009D0790 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F8901BC81AA792AC009D0790 /* Images.xcassets */; };
@@ -14,6 +15,8 @@
 		F8901BD81AA792AD009D0790 /* Barrie2BookTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8901BD71AA792AD009D0790 /* Barrie2BookTests.swift */; };
 		F8901BEB1AA793AA009D0790 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8901BEA1AA793AA009D0790 /* SearchViewController.swift */; };
 		F8901C1B1AA7F895009D0790 /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8901C1A1AA7F895009D0790 /* UserViewController.swift */; };
+		F8901C211AA803ED009D0790 /* SearchResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8901C201AA803ED009D0790 /* SearchResultCell.swift */; };
+		F8901C271AA807E4009D0790 /* SearchResultCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F8901C261AA807E4009D0790 /* SearchResultCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,6 +30,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F8775C221AA8B7E2009BD8EC /* NothingFoundCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NothingFoundCell.xib; sourceTree = "<group>"; };
 		F8901BBC1AA792AC009D0790 /* Barrie2Book.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Barrie2Book.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8901BC01AA792AC009D0790 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F8901BC11AA792AC009D0790 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -38,6 +42,8 @@
 		F8901BD71AA792AD009D0790 /* Barrie2BookTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Barrie2BookTests.swift; sourceTree = "<group>"; };
 		F8901BEA1AA793AA009D0790 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		F8901C1A1AA7F895009D0790 /* UserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
+		F8901C201AA803ED009D0790 /* SearchResultCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResultCell.swift; sourceTree = "<group>"; };
+		F8901C261AA807E4009D0790 /* SearchResultCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchResultCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +124,8 @@
 			children = (
 				F8901BCA1AA792AC009D0790 /* LaunchScreen.xib */,
 				F8901BC51AA792AC009D0790 /* Main.storyboard */,
+				F8901C261AA807E4009D0790 /* SearchResultCell.xib */,
+				F8775C221AA8B7E2009BD8EC /* NothingFoundCell.xib */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -143,6 +151,7 @@
 			isa = PBXGroup;
 			children = (
 				F8901BEA1AA793AA009D0790 /* SearchViewController.swift */,
+				F8901C201AA803ED009D0790 /* SearchResultCell.swift */,
 			);
 			name = Trade;
 			sourceTree = "<group>";
@@ -237,6 +246,8 @@
 			files = (
 				F8901BC71AA792AC009D0790 /* Main.storyboard in Resources */,
 				F8901BCC1AA792AC009D0790 /* LaunchScreen.xib in Resources */,
+				F8901C271AA807E4009D0790 /* SearchResultCell.xib in Resources */,
+				F8775C231AA8B7E2009BD8EC /* NothingFoundCell.xib in Resources */,
 				F8901BC91AA792AC009D0790 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -257,6 +268,7 @@
 			files = (
 				F8901BEB1AA793AA009D0790 /* SearchViewController.swift in Sources */,
 				F8901C1B1AA7F895009D0790 /* UserViewController.swift in Sources */,
+				F8901C211AA803ED009D0790 /* SearchResultCell.swift in Sources */,
 				F8901BC21AA792AC009D0790 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

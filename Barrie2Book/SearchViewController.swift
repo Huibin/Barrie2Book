@@ -25,10 +25,10 @@ class SearchViewController: UIViewController {
         searchTableView.contentInset = UIEdgeInsets(top: 64, left: 0, bottom: 0, right: 0)
         searchTableView.rowHeight = 80
         
-//        var cellNib = UINib(nibName: TableViewCellIdentifiers.searchResultCell, bundle: nil)
-//        tableView.registerNib(cellNib, forCellReuseIdentifier: TableViewCellIdentifiers.searchResultCell)
-//        cellNib = UINib(nibName: TableViewCellIdentifiers.nothingFoundCell, bundle: nil)
-//        tableView.registerNib(cellNib, forCellReuseIdentifier: TableViewCellIdentifiers.nothingFoundCell)
+        var cellNib = UINib(nibName: TableViewCellIdentifiers.searchResultCell, bundle: nil)
+        searchTableView.registerNib(cellNib, forCellReuseIdentifier: TableViewCellIdentifiers.searchResultCell)
+        cellNib = UINib(nibName: TableViewCellIdentifiers.nothingFoundCell, bundle: nil)
+        searchTableView.registerNib(cellNib, forCellReuseIdentifier: TableViewCellIdentifiers.nothingFoundCell)
 
     }
 
@@ -49,7 +49,7 @@ class SearchViewController: UIViewController {
     */
 }
 
-
+//MARK: - Search Bar
 extension SearchViewController: UISearchBarDelegate {
     func searchBarSearchButtonClicked(searchBar: UISearchBar) {
         searchBar.resignFirstResponder()
@@ -58,5 +58,26 @@ extension SearchViewController: UISearchBarDelegate {
     
     func positionForBar(bar: UIBarPositioning) -> UIBarPosition {
         return .TopAttached
+    }
+}
+
+//MARK: - Table
+extension SearchViewController: UITableViewDataSource {
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 3
+    }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        if indexPath.row == 0 {
+            return tableView.dequeueReusableCellWithIdentifier(TableViewCellIdentifiers.nothingFoundCell, forIndexPath: indexPath) as UITableViewCell
+        } else {
+            let cell = tableView.dequeueReusableCellWithIdentifier(TableViewCellIdentifiers.searchResultCell, forIndexPath: indexPath) as SearchResultCell
+            
+            cell.titleLabel.text = "Java"
+            cell.authorLabel.text = "Robin"
+            
+            return cell
+
+        }        
     }
 }

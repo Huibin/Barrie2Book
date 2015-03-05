@@ -15,11 +15,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     //custom color
     func customizeAppearance() {
+        //bar color
         let barTintColor = UIColor(red: 103/255, green: 153/255, blue: 170/255, alpha: 0.1)
         UISearchBar.appearance().barTintColor = barTintColor
         UINavigationBar.appearance().barTintColor = barTintColor
-        UITabBar.appearance().barTintColor = barTintColor
-
+        //window color
         window!.tintColor = UIColor(red: 13/255, green: 26/255, blue: 35/255, alpha: 1)
     }
 
