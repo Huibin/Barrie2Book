@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="6Xh-Rh-o1D">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+    </dependencies>
+    <scenes>
+        <!--Tab Bar Controller-->
+        <scene sceneID="D7c-qo-x2s">
+            <objects>
+                <tabBarController id="6Xh-Rh-o1D" sceneMemberID="viewController">
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="WgM-za-o9u">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="uz1-bx-P2b" kind="relationship" relationship="viewControllers" id="jfh-I7-c7D"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xa6-lc-WEf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-843" y="5"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="ixD-S1-K3k">
+            <objects>
+                <viewController id="uz1-bx-P2b" customClass="SearchViewController" customModule="Barrie2Book" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="P2y-c8-JLU"/>
+                        <viewControllerLayoutGuide type="bottom" id="yQK-q4-dAv"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="YAN-sx-7zF">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="y9s-M6-yjB">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                            <searchBar contentMode="redraw" placeholder="book title, author" translatesAutoresizingMaskIntoConstraints="NO" id="jJo-QW-u9x">
+                                <rect key="frame" x="0.0" y="20" width="600" height="44"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="uz1-bx-P2b" id="eLV-D8-8Hd"/>
+                                </connections>
+                            </searchBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="jJo-QW-u9x" firstAttribute="top" secondItem="P2y-c8-JLU" secondAttribute="bottom" id="0PT-Y3-muk"/>
+                            <constraint firstAttribute="trailing" secondItem="y9s-M6-yjB" secondAttribute="trailing" id="4bh-UU-e9s"/>
+                            <constraint firstItem="y9s-M6-yjB" firstAttribute="bottom" secondItem="yQK-q4-dAv" secondAttribute="top" constant="49" id="4yw-7K-Bnc"/>
+                            <constraint firstItem="jJo-QW-u9x" firstAttribute="trailing" secondItem="y9s-M6-yjB" secondAttribute="trailing" id="5Xm-Gm-GnV"/>
+                            <constraint firstItem="y9s-M6-yjB" firstAttribute="top" secondItem="YAN-sx-7zF" secondAttribute="top" id="NbH-6Z-Mum"/>
+                            <constraint firstItem="jJo-QW-u9x" firstAttribute="leading" secondItem="y9s-M6-yjB" secondAttribute="leading" id="PGM-Cd-3cc"/>
+                            <constraint firstItem="y9s-M6-yjB" firstAttribute="leading" secondItem="YAN-sx-7zF" secondAttribute="leading" id="buG-Sr-QY5"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="2Bf-he-lza"/>
+                    <connections>
+                        <outlet property="searchBar" destination="jJo-QW-u9x" id="dH8-nu-NFq"/>
+                        <outlet property="searchTableView" destination="y9s-M6-yjB" id="yNj-mn-dlL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wu3-YE-zhE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-61" y="-419"/>
+        </scene>
+    </scenes>
+</document>

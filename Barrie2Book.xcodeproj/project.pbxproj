@@ -1,0 +1,444 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F8901BC21AA792AC009D0790 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8901BC11AA792AC009D0790 /* AppDelegate.swift */; };
+		F8901BC71AA792AC009D0790 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F8901BC51AA792AC009D0790 /* Main.storyboard */; };
+		F8901BC91AA792AC009D0790 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F8901BC81AA792AC009D0790 /* Images.xcassets */; };
+		F8901BCC1AA792AC009D0790 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = F8901BCA1AA792AC009D0790 /* LaunchScreen.xib */; };
+		F8901BD81AA792AD009D0790 /* Barrie2BookTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8901BD71AA792AD009D0790 /* Barrie2BookTests.swift */; };
+		F8901BEB1AA793AA009D0790 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8901BEA1AA793AA009D0790 /* SearchViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F8901BD21AA792AD009D0790 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F8901BB41AA792AC009D0790 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F8901BBB1AA792AC009D0790;
+			remoteInfo = Barrie2Book;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		F8901BBC1AA792AC009D0790 /* Barrie2Book.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Barrie2Book.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F8901BC01AA792AC009D0790 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F8901BC11AA792AC009D0790 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F8901BC61AA792AC009D0790 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F8901BC81AA792AC009D0790 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		F8901BCB1AA792AC009D0790 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		F8901BD11AA792AD009D0790 /* Barrie2BookTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Barrie2BookTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F8901BD61AA792AD009D0790 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F8901BD71AA792AD009D0790 /* Barrie2BookTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Barrie2BookTests.swift; sourceTree = "<group>"; };
+		F8901BEA1AA793AA009D0790 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F8901BB91AA792AC009D0790 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F8901BCE1AA792AD009D0790 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F8901BB31AA792AC009D0790 = {
+			isa = PBXGroup;
+			children = (
+				F8901BBE1AA792AC009D0790 /* Barrie2Book */,
+				F8901BD41AA792AD009D0790 /* Barrie2BookTests */,
+				F8901BBD1AA792AC009D0790 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F8901BBD1AA792AC009D0790 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F8901BBC1AA792AC009D0790 /* Barrie2Book.app */,
+				F8901BD11AA792AD009D0790 /* Barrie2BookTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F8901BBE1AA792AC009D0790 /* Barrie2Book */ = {
+			isa = PBXGroup;
+			children = (
+				F8901BE31AA7933D009D0790 /* Models */,
+				F8901BE21AA79334009D0790 /* Controllers */,
+				F8901BE11AA7932C009D0790 /* Views */,
+				F8901BC81AA792AC009D0790 /* Images.xcassets */,
+				F8901BBF1AA792AC009D0790 /* Supporting Files */,
+			);
+			path = Barrie2Book;
+			sourceTree = "<group>";
+		};
+		F8901BBF1AA792AC009D0790 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F8901BC01AA792AC009D0790 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F8901BD41AA792AD009D0790 /* Barrie2BookTests */ = {
+			isa = PBXGroup;
+			children = (
+				F8901BD71AA792AD009D0790 /* Barrie2BookTests.swift */,
+				F8901BD51AA792AD009D0790 /* Supporting Files */,
+			);
+			path = Barrie2BookTests;
+			sourceTree = "<group>";
+		};
+		F8901BD51AA792AD009D0790 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F8901BD61AA792AD009D0790 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F8901BE11AA7932C009D0790 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F8901BCA1AA792AC009D0790 /* LaunchScreen.xib */,
+				F8901BC51AA792AC009D0790 /* Main.storyboard */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		F8901BE21AA79334009D0790 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				F8901BC11AA792AC009D0790 /* AppDelegate.swift */,
+				F8901BEA1AA793AA009D0790 /* SearchViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		F8901BE31AA7933D009D0790 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F8901BBB1AA792AC009D0790 /* Barrie2Book */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F8901BDB1AA792AD009D0790 /* Build configuration list for PBXNativeTarget "Barrie2Book" */;
+			buildPhases = (
+				F8901BB81AA792AC009D0790 /* Sources */,
+				F8901BB91AA792AC009D0790 /* Frameworks */,
+				F8901BBA1AA792AC009D0790 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Barrie2Book;
+			productName = Barrie2Book;
+			productReference = F8901BBC1AA792AC009D0790 /* Barrie2Book.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F8901BD01AA792AD009D0790 /* Barrie2BookTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F8901BDE1AA792AD009D0790 /* Build configuration list for PBXNativeTarget "Barrie2BookTests" */;
+			buildPhases = (
+				F8901BCD1AA792AD009D0790 /* Sources */,
+				F8901BCE1AA792AD009D0790 /* Frameworks */,
+				F8901BCF1AA792AD009D0790 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F8901BD31AA792AD009D0790 /* PBXTargetDependency */,
+			);
+			name = Barrie2BookTests;
+			productName = Barrie2BookTests;
+			productReference = F8901BD11AA792AD009D0790 /* Barrie2BookTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F8901BB41AA792AC009D0790 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = "Huibin Zhao";
+				TargetAttributes = {
+					F8901BBB1AA792AC009D0790 = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
+					F8901BD01AA792AD009D0790 = {
+						CreatedOnToolsVersion = 6.1.1;
+						TestTargetID = F8901BBB1AA792AC009D0790;
+					};
+				};
+			};
+			buildConfigurationList = F8901BB71AA792AC009D0790 /* Build configuration list for PBXProject "Barrie2Book" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F8901BB31AA792AC009D0790;
+			productRefGroup = F8901BBD1AA792AC009D0790 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F8901BBB1AA792AC009D0790 /* Barrie2Book */,
+				F8901BD01AA792AD009D0790 /* Barrie2BookTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F8901BBA1AA792AC009D0790 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F8901BC71AA792AC009D0790 /* Main.storyboard in Resources */,
+				F8901BCC1AA792AC009D0790 /* LaunchScreen.xib in Resources */,
+				F8901BC91AA792AC009D0790 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F8901BCF1AA792AD009D0790 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F8901BB81AA792AC009D0790 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F8901BEB1AA793AA009D0790 /* SearchViewController.swift in Sources */,
+				F8901BC21AA792AC009D0790 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F8901BCD1AA792AD009D0790 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F8901BD81AA792AD009D0790 /* Barrie2BookTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F8901BD31AA792AD009D0790 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F8901BBB1AA792AC009D0790 /* Barrie2Book */;
+			targetProxy = F8901BD21AA792AD009D0790 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F8901BC51AA792AC009D0790 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F8901BC61AA792AC009D0790 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F8901BCA1AA792AC009D0790 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F8901BCB1AA792AC009D0790 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F8901BD91AA792AD009D0790 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F8901BDA1AA792AD009D0790 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F8901BDC1AA792AD009D0790 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Barrie2Book/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		F8901BDD1AA792AD009D0790 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Barrie2Book/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		F8901BDF1AA792AD009D0790 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = Barrie2BookTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Barrie2Book.app/Barrie2Book";
+			};
+			name = Debug;
+		};
+		F8901BE01AA792AD009D0790 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = Barrie2BookTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Barrie2Book.app/Barrie2Book";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F8901BB71AA792AC009D0790 /* Build configuration list for PBXProject "Barrie2Book" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F8901BD91AA792AD009D0790 /* Debug */,
+				F8901BDA1AA792AD009D0790 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F8901BDB1AA792AD009D0790 /* Build configuration list for PBXNativeTarget "Barrie2Book" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F8901BDC1AA792AD009D0790 /* Debug */,
+				F8901BDD1AA792AD009D0790 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		F8901BDE1AA792AD009D0790 /* Build configuration list for PBXNativeTarget "Barrie2BookTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F8901BDF1AA792AD009D0790 /* Debug */,
+				F8901BE01AA792AD009D0790 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F8901BB41AA792AC009D0790 /* Project object */;
+}
