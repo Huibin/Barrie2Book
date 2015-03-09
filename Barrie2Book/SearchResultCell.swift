@@ -11,7 +11,7 @@ import UIKit
 class SearchResultCell: UITableViewCell {
     
     @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var authorLabel: UILabel!
+    @IBOutlet weak var priceLabel: UILabel!
     @IBOutlet weak var coverImage: UIImageView!
     
     override func awakeFromNib() {

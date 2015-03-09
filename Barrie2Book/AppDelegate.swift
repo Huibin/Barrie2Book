@@ -24,7 +24,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        customizeAppearance()
+        
+//        sleep(3)    //loading time
+        customizeAppearance()   //custom color
         return true
     }
 

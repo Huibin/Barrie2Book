@@ -7,24 +7,25 @@
 //
 
 import Foundation
+import UIKit
 
-class Books {
-    var title = "";
-    var edition = "";
-    var author = "";
+struct Books {
+    var ISBN: String!
+    var title: String!
+    var edition: String!
+    var author: String!
     var publisher: String!
-    var condition: String!
     var imageUrl: String!
-    
-    struct Type  {
-        static let sell = "Sell"
-        static let need = "Need"
+    var image: UIImage!
+
+    var type: String!      // sell, need, keep
+    var degree: String! // 80% new
+    var price: String!  // $ 12.00
+    var owner: String!
+
+    init(title: String) {
+        self.title = title
     }
-    
-    struct Status {
-        static let done = "Done"
-        static let going = "Going"
-    }
-    
-    
+
+
 }

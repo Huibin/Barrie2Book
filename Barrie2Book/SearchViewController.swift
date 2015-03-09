@@ -18,18 +18,26 @@ class SearchViewController: UIViewController {
         static let nothingFoundCell = "NothingFoundCell"
     }
     
+    let searcher: Searcher!
+    
+    var books: [Books] = [Books]() {
+        didSet {
+            searchTableView.reloadData()
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        //table style
         searchTableView.contentInset = UIEdgeInsets(top: 64, left: 0, bottom: 0, right: 0)
         searchTableView.rowHeight = 80
-        
+        //register table cell
         var cellNib = UINib(nibName: TableViewCellIdentifiers.searchResultCell, bundle: nil)
         searchTableView.registerNib(cellNib, forCellReuseIdentifier: TableViewCellIdentifiers.searchResultCell)
         cellNib = UINib(nibName: TableViewCellIdentifiers.nothingFoundCell, bundle: nil)
         searchTableView.registerNib(cellNib, forCellReuseIdentifier: TableViewCellIdentifiers.nothingFoundCell)
 
+        reloadBooks("", "")
     }
 
     override func didReceiveMemoryWarning() {
@@ -37,11 +45,36 @@ class SearchViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    //pop alert to show error
+    func showAlert(titleStr: String, _ messageStr: String) {
+        let alert = UIAlertController(title: titleStr, message: messageStr,preferredStyle: .Alert)
+        let action = UIAlertAction(title: "OK", style: .Default, handler: nil)
+        alert.addAction(action)
+        self.presentViewController(alert, animated: true, completion: nil)
+    }
+    
+    //reload data
+    func reloadBooks(title: String, _ type: String) {
+        books.removeAll()
+        let url = Searcher.urlWithSearchText(title, type)
+        
+        let jsonStr = Searcher.performRequestWithURL(url)
+        if let jsonStr = jsonStr {
+            if let dic = Searcher.parseJSON(jsonStr) {
+                if let result = Searcher.parseDictionary(dic) {
+                    self.books = result
+                } else {
+                    self.books = [Books]()
+                }
+            }
+        } else {
+            showAlert("Sorry", "Network error, please try later.")
+        }
+
+    }
 
     /*
     // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
@@ -54,6 +87,7 @@ extension SearchViewController: UISearchBarDelegate {
     func searchBarSearchButtonClicked(searchBar: UISearchBar) {
         searchBar.resignFirstResponder()
         
+        reloadBooks(searchBar.text, "")
     }
     
     func positionForBar(bar: UIBarPositioning) -> UIBarPosition {
@@ -63,23 +97,32 @@ extension SearchViewController: UISearchBarDelegate {
 
 //MARK: - Table Data
 extension SearchViewController: UITableViewDataSource {
+
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return books.count == 0 ? 1: books.count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        if indexPath.row == 0 {
+        if (books.count == 0) {
             return tableView.dequeueReusableCellWithIdentifier(TableViewCellIdentifiers.nothingFoundCell, forIndexPath: indexPath) as UITableViewCell
         } else {
             let cell = tableView.dequeueReusableCellWithIdentifier(TableViewCellIdentifiers.searchResultCell, forIndexPath: indexPath) as SearchResultCell
             
-            cell.titleLabel.text = "Java"
-            cell.authorLabel.text = "Robin"
-            
+            cell.titleLabel.text = books[indexPath.row].title
+            if let bookPrice = books[indexPath.row].price {
+                cell.priceLabel.text = "$ \(bookPrice)"
+            } else {
+                cell.priceLabel.text = ""
+            }
+            if let image = books[indexPath.row].image {
+                cell.coverImage.image = image
+            }
             return cell
+        }
 
-        }        
     }
+    
+    
 }
 
 //MARK: - Table Delegate
