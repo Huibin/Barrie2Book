@@ -14,11 +14,13 @@ class SearchViewController: UIViewController {
     @IBOutlet weak var searchTableView: UITableView!
     
     struct TableViewCellIdentifiers {
+        static let loadingCell = "LoadingCell"
         static let searchResultCell = "SearchResultCell"
         static let nothingFoundCell = "NothingFoundCell"
     }
     
     let searcher: Searcher!
+    var isLoading: Bool = false
     
     var books: [Books] = [Books]() {
         didSet {
@@ -36,6 +38,8 @@ class SearchViewController: UIViewController {
         searchTableView.registerNib(cellNib, forCellReuseIdentifier: TableViewCellIdentifiers.searchResultCell)
         cellNib = UINib(nibName: TableViewCellIdentifiers.nothingFoundCell, bundle: nil)
         searchTableView.registerNib(cellNib, forCellReuseIdentifier: TableViewCellIdentifiers.nothingFoundCell)
+        cellNib = UINib(nibName: TableViewCellIdentifiers.loadingCell, bundle: nil)
+        searchTableView.registerNib(cellNib, forCellReuseIdentifier: TableViewCellIdentifiers.loadingCell)
 
         reloadBooks("", "")
     }
@@ -56,21 +60,33 @@ class SearchViewController: UIViewController {
     //reload data
     func reloadBooks(title: String, _ type: String) {
         books.removeAll()
-        let url = Searcher.urlWithSearchText(title, type)
-        
-        let jsonStr = Searcher.performRequestWithURL(url)
-        if let jsonStr = jsonStr {
-            if let dic = Searcher.parseJSON(jsonStr) {
-                if let result = Searcher.parseDictionary(dic) {
-                    self.books = result
-                } else {
-                    self.books = [Books]()
+        isLoading = true
+        let queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)
+        dispatch_async(queue) {
+            let url = Searcher.urlWithSearchText(title, type)
+            let jsonStr = Searcher.performRequestWithURL(url)
+            if let jsonStr = jsonStr {
+                if let dic = Searcher.parseJSON(jsonStr) {
+                    if let result = Searcher.parseDictionary(dic) {
+                        dispatch_async(dispatch_get_main_queue()) {
+                            self.books = result
+                            self.isLoading = false
+                        }
+                    } else {
+                        dispatch_async(dispatch_get_main_queue()) {
+                            self.books = [Books]()
+                            self.isLoading = false
+                        }
+                    }
+                }
+            } else {
+                dispatch_async(dispatch_get_main_queue()) {
+                    self.showAlert("Sorry", "Network error, please try later.")
+                    self.isLoading = false
+                    self.searchTableView.reloadData()
                 }
             }
-        } else {
-            showAlert("Sorry", "Network error, please try later.")
         }
-
     }
 
     /*
@@ -86,7 +102,6 @@ class SearchViewController: UIViewController {
 extension SearchViewController: UISearchBarDelegate {
     func searchBarSearchButtonClicked(searchBar: UISearchBar) {
         searchBar.resignFirstResponder()
-        
         reloadBooks(searchBar.text, "")
     }
     
@@ -103,23 +118,29 @@ extension SearchViewController: UITableViewDataSource {
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        if (books.count == 0) {
-            return tableView.dequeueReusableCellWithIdentifier(TableViewCellIdentifiers.nothingFoundCell, forIndexPath: indexPath) as UITableViewCell
-        } else {
-            let cell = tableView.dequeueReusableCellWithIdentifier(TableViewCellIdentifiers.searchResultCell, forIndexPath: indexPath) as SearchResultCell
-            
-            cell.titleLabel.text = books[indexPath.row].title
-            if let bookPrice = books[indexPath.row].price {
-                cell.priceLabel.text = "$ \(bookPrice)"
-            } else {
-                cell.priceLabel.text = ""
-            }
-            if let image = books[indexPath.row].image {
-                cell.coverImage.image = image
-            }
+        if isLoading {
+            let cell = tableView.dequeueReusableCellWithIdentifier(TableViewCellIdentifiers.loadingCell, forIndexPath: indexPath) as UITableViewCell
+            let spinner = cell.viewWithTag(100) as UIActivityIndicatorView
+            spinner.startAnimating()
             return cell
+        } else {
+            if (books.count == 0) {
+                return tableView.dequeueReusableCellWithIdentifier(TableViewCellIdentifiers.nothingFoundCell, forIndexPath: indexPath) as UITableViewCell
+            } else {
+                let cell = tableView.dequeueReusableCellWithIdentifier(TableViewCellIdentifiers.searchResultCell, forIndexPath: indexPath) as SearchResultCell
+                
+                cell.titleLabel.text = books[indexPath.row].title
+                if let bookPrice = books[indexPath.row].price {
+                    cell.priceLabel.text = "$ \(bookPrice)"
+                } else {
+                    cell.priceLabel.text = ""
+                }
+                if let image = books[indexPath.row].image {
+                    cell.coverImage.image = image
+                }
+                return cell
+            }
         }
-
     }
     
     
@@ -132,8 +153,11 @@ extension SearchViewController: UITableViewDelegate {
     }
     
     func tableView(tableView: UITableView, willSelectRowAtIndexPath indexPath: NSIndexPath) -> NSIndexPath? {
+        if isLoading {
+            return nil
+        } else {
             return indexPath
-
+        }
     }
 }
 
