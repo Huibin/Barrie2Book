@@ -35,17 +35,14 @@ class Searcher {
     }
     
     //parse JSON
-    class func parseJSON(jsonString: String) -> [String: AnyObject]? {
-        if let data = jsonString.dataUsingEncoding(NSUTF8StringEncoding) {
-            var error: NSError?
-            if let json = NSJSONSerialization.JSONObjectWithData(data, options:
-        NSJSONReadingOptions(0), error: &error) as? [String: AnyObject] {
-                return json
-            }
+    class func parseJSON(data: NSData) -> [String: AnyObject]? {
+        var error: NSError?
+        if let json = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions(0), error: &error) as? [String: AnyObject] {
+            return json
         }
         return nil
     }
-    
+
     //parse JSON dictionary
     class func parseDictionary(dictionary: [String: AnyObject]) -> [Books]? {
         let resultCount = dictionary["resultCount"] as Int

@@ -28,4 +28,15 @@ class SearchResultCell: UITableViewCell {
         // Configure the view for the selected state
     }
 
+    func cellConfigue(book: Books) {
+        titleLabel.text = book.title
+        if let bookPrice = book.price {
+            priceLabel.text = "$ \(bookPrice)"
+        } else {
+            priceLabel.text = ""
+        }
+        if let image = book.image {
+            coverImage.image = image
+        }
+    }
 }

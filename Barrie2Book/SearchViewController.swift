@@ -19,7 +19,7 @@ class SearchViewController: UIViewController {
         static let nothingFoundCell = "NothingFoundCell"
     }
     
-    let searcher: Searcher!
+    var searchTask: NSURLSessionDataTask?
     var isLoading: Bool = false
     
     var books: [Books] = [Books]() {
@@ -31,7 +31,7 @@ class SearchViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         //table style
-        searchTableView.contentInset = UIEdgeInsets(top: 64, left: 0, bottom: 0, right: 0)
+        searchTableView.contentInset = UIEdgeInsets(top: 108, left: 0, bottom: 0, right: 0)
         searchTableView.rowHeight = 80
         //register table cell
         var cellNib = UINib(nibName: TableViewCellIdentifiers.searchResultCell, bundle: nil)
@@ -59,34 +59,45 @@ class SearchViewController: UIViewController {
     
     //reload data
     func reloadBooks(title: String, _ type: String) {
-        books.removeAll()
+        searchTask?.cancel()
         isLoading = true
-        let queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)
-        dispatch_async(queue) {
-            let url = Searcher.urlWithSearchText(title, type)
-            let jsonStr = Searcher.performRequestWithURL(url)
-            if let jsonStr = jsonStr {
-                if let dic = Searcher.parseJSON(jsonStr) {
-                    if let result = Searcher.parseDictionary(dic) {
-                        dispatch_async(dispatch_get_main_queue()) {
-                            self.books = result
-                            self.isLoading = false
-                        }
-                    } else {
-                        dispatch_async(dispatch_get_main_queue()) {
-                            self.books = [Books]()
-                            self.isLoading = false
+        books.removeAll()
+        
+        let url = Searcher.urlWithSearchText(title, type)
+        let session = NSURLSession.sharedSession()
+        searchTask = session.dataTaskWithURL(url, completionHandler: {
+            data, response, error in
+            if let error = error {
+                if error.code == -999 {
+                    return
+                }
+            }
+            if let httpRes = response as? NSHTTPURLResponse {
+                if httpRes.statusCode == 200 {
+                    if let jsonData = Searcher.parseJSON(data) {
+                        if let jsonDic = Searcher.parseDictionary(jsonData) {
+                            dispatch_async(dispatch_get_main_queue()) {
+                                self.books = jsonDic
+                                self.isLoading = false
+                            }
+                            return
+                        } else {
+                            dispatch_async(dispatch_get_main_queue()) {
+                                self.books = [Books]()
+                                self.isLoading = false
+                            }
+                            return
                         }
                     }
                 }
-            } else {
-                dispatch_async(dispatch_get_main_queue()) {
-                    self.showAlert("Sorry", "Network error, please try later.")
-                    self.isLoading = false
-                    self.searchTableView.reloadData()
-                }
             }
-        }
+            dispatch_async(dispatch_get_main_queue()) {
+                self.isLoading = false
+                self.books = [Books]()
+                self.showAlert("Sorry", "Network error, please try later.")
+            }
+        })
+        searchTask?.resume()
     }
 
     /*
@@ -129,15 +140,8 @@ extension SearchViewController: UITableViewDataSource {
             } else {
                 let cell = tableView.dequeueReusableCellWithIdentifier(TableViewCellIdentifiers.searchResultCell, forIndexPath: indexPath) as SearchResultCell
                 
-                cell.titleLabel.text = books[indexPath.row].title
-                if let bookPrice = books[indexPath.row].price {
-                    cell.priceLabel.text = "$ \(bookPrice)"
-                } else {
-                    cell.priceLabel.text = ""
-                }
-                if let image = books[indexPath.row].image {
-                    cell.coverImage.image = image
-                }
+                let book = books[indexPath.row]
+                cell.cellConfigue(book)
                 return cell
             }
         }
