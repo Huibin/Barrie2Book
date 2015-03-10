@@ -12,6 +12,7 @@ class SearchViewController: UIViewController {
 
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var searchTableView: UITableView!
+    @IBOutlet weak var segmentedControl: UISegmentedControl!
     
     struct TableViewCellIdentifiers {
         static let loadingCell = "LoadingCell"
@@ -41,13 +42,18 @@ class SearchViewController: UIViewController {
         cellNib = UINib(nibName: TableViewCellIdentifiers.loadingCell, bundle: nil)
         searchTableView.registerNib(cellNib, forCellReuseIdentifier: TableViewCellIdentifiers.loadingCell)
 
-        reloadBooks("", "")
+        reloadBooks("", "1")
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    @IBAction func resignKeyboard(sender: UITapGestureRecognizer) {
+        searchBar.resignFirstResponder()
+    }
+    
     
     //pop alert to show error
     func showAlert(titleStr: String, _ messageStr: String) {
@@ -100,6 +106,12 @@ class SearchViewController: UIViewController {
         searchTask?.resume()
     }
 
+    
+    @IBAction func changeSearchType(sender: UISegmentedControl) {
+        let searchType = String(sender.selectedSegmentIndex == 0 ? 1 : 0)
+        reloadBooks(searchBar.text, searchType)
+    }
+    
     /*
     // MARK: - Navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
@@ -113,7 +125,8 @@ class SearchViewController: UIViewController {
 extension SearchViewController: UISearchBarDelegate {
     func searchBarSearchButtonClicked(searchBar: UISearchBar) {
         searchBar.resignFirstResponder()
-        reloadBooks(searchBar.text, "")
+        let searchType = String(segmentedControl.selectedSegmentIndex == 0 ? 1 : 0)
+        reloadBooks(searchBar.text, searchType)
     }
     
     func positionForBar(bar: UIBarPositioning) -> UIBarPosition {

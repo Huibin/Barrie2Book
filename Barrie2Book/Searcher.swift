@@ -17,8 +17,8 @@ class Searcher {
         let escapedSearchText =
         searchText.stringByAddingPercentEscapesUsingEncoding(
             NSUTF8StringEncoding)!
-//        let urlString = "http://mycodeleaf.com/BookFinder/search.php?term=\(escapedSearchText)&type=\(searchType)"
-                let urlString = "http://mycodeleaf.com/BookFinder/search.php?term=\(escapedSearchText)&type=1"
+        let urlString = "http://mycodeleaf.com/BookFinder/search.php?term=\(escapedSearchText)&type=\(searchType)"
+//                let urlString = "http://mycodeleaf.com/BookFinder/search.php?term=\(escapedSearchText)&type=1"
         let url = NSURL(string: urlString)
         return url!
     }

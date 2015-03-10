@@ -37,6 +37,7 @@
                         <subviews>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="k8o-D1-FQv">
                                 <rect key="frame" x="0.0" y="20" width="600" height="44"/>
+                                <color key="barTintColor" red="0.40392156862745099" green="0.59999999999999998" blue="0.66666666666666663" alpha="0.10000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
                                 <items>
                                     <navigationItem id="La8-TW-8V3"/>
                                 </items>
@@ -85,25 +86,57 @@
                                     <outlet property="delegate" destination="uz1-bx-P2b" id="eLV-D8-8Hd"/>
                                 </connections>
                             </searchBar>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="daM-kw-BZj">
+                                <rect key="frame" x="0.0" y="64" width="600" height="44"/>
+                                <items>
+                                    <navigationItem id="tHj-xp-O5P">
+                                        <nil key="title"/>
+                                        <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="shd-wv-9Vx">
+                                            <rect key="frame" x="180" y="7" width="240" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <segments>
+                                                <segment title="Sell"/>
+                                                <segment title="Need"/>
+                                            </segments>
+                                            <connections>
+                                                <action selector="changeSearchType:" destination="uz1-bx-P2b" eventType="valueChanged" id="fVr-zh-l0D"/>
+                                            </connections>
+                                        </segmentedControl>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="jJo-QW-u9x" firstAttribute="top" secondItem="P2y-c8-JLU" secondAttribute="bottom" id="0PT-Y3-muk"/>
                             <constraint firstAttribute="trailing" secondItem="y9s-M6-yjB" secondAttribute="trailing" id="4bh-UU-e9s"/>
                             <constraint firstItem="y9s-M6-yjB" firstAttribute="bottom" secondItem="yQK-q4-dAv" secondAttribute="top" constant="49" id="4yw-7K-Bnc"/>
                             <constraint firstItem="jJo-QW-u9x" firstAttribute="trailing" secondItem="y9s-M6-yjB" secondAttribute="trailing" id="5Xm-Gm-GnV"/>
+                            <constraint firstItem="daM-kw-BZj" firstAttribute="leading" secondItem="jJo-QW-u9x" secondAttribute="leading" id="HJX-Hu-SQv"/>
+                            <constraint firstItem="daM-kw-BZj" firstAttribute="top" secondItem="jJo-QW-u9x" secondAttribute="bottom" id="IDt-Tu-wgw"/>
                             <constraint firstItem="y9s-M6-yjB" firstAttribute="top" secondItem="YAN-sx-7zF" secondAttribute="top" id="NbH-6Z-Mum"/>
                             <constraint firstItem="jJo-QW-u9x" firstAttribute="leading" secondItem="y9s-M6-yjB" secondAttribute="leading" id="PGM-Cd-3cc"/>
                             <constraint firstItem="y9s-M6-yjB" firstAttribute="leading" secondItem="YAN-sx-7zF" secondAttribute="leading" id="buG-Sr-QY5"/>
+                            <constraint firstItem="daM-kw-BZj" firstAttribute="trailing" secondItem="jJo-QW-u9x" secondAttribute="trailing" id="pB1-nj-fTi"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="NEZ-ZJ-wKB" appends="YES" id="orB-dT-mkl"/>
+                        </connections>
                     </view>
                     <tabBarItem key="tabBarItem" title="Trade" image="buy" id="2Bf-he-lza"/>
                     <connections>
                         <outlet property="searchBar" destination="jJo-QW-u9x" id="dH8-nu-NFq"/>
                         <outlet property="searchTableView" destination="y9s-M6-yjB" id="yNj-mn-dlL"/>
+                        <outlet property="segmentedControl" destination="shd-wv-9Vx" id="XYV-iQ-OKn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wu3-YE-zhE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="NEZ-ZJ-wKB">
+                    <connections>
+                        <action selector="resignKeyboard:" destination="uz1-bx-P2b" id="B7x-U4-YUF"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="-116" y="-417"/>
         </scene>
