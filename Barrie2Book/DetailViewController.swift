@@ -38,6 +38,8 @@ class DetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        //custom background color
+        view.backgroundColor = UIColor.clearColor()
         //custom popup view color
         view.tintColor = UIColor(red: 103/255, green: 153/255, blue: 170/255, alpha: 1)
         //custom popup view corner sharp
@@ -121,6 +123,15 @@ class DetailViewController: UIViewController {
         dismissViewControllerAnimated(true, completion: nil)
     }
     
+    //animate popup window appear
+    func animationControllerForPresentedController(presented: UIViewController, presentingController presenting: UIViewController, sourceController source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        return BounceAnimationController()
+    }
+    
+    //animate popup window disappear
+    func animationControllerForDismissedController(dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        return SlideOutAnimationController()
+    }
     /*
     // MARK: - Navigation
 
