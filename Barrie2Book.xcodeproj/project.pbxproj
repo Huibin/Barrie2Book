@@ -11,6 +11,7 @@
 		F8775C271AA8CFC6009BD8EC /* Books.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8775C261AA8CFC6009BD8EC /* Books.swift */; };
 		F8775C291AA8CFEF009BD8EC /* Owners.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8775C281AA8CFEF009BD8EC /* Owners.swift */; };
 		F8775C2B1AA8D5FD009BD8EC /* Searcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8775C2A1AA8D5FD009BD8EC /* Searcher.swift */; };
+		F88470C41AB0C2E20019756B /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F88470C31AB0C2E20019756B /* Validation.swift */; };
 		F88484D11AADE87000CC9498 /* LoadingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F88484D01AADE87000CC9498 /* LoadingCell.xib */; };
 		F8901BC21AA792AC009D0790 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8901BC11AA792AC009D0790 /* AppDelegate.swift */; };
 		F8901BC71AA792AC009D0790 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F8901BC51AA792AC009D0790 /* Main.storyboard */; };
@@ -41,6 +42,7 @@
 		F8775C261AA8CFC6009BD8EC /* Books.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Books.swift; sourceTree = "<group>"; };
 		F8775C281AA8CFEF009BD8EC /* Owners.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Owners.swift; sourceTree = "<group>"; };
 		F8775C2A1AA8D5FD009BD8EC /* Searcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Searcher.swift; sourceTree = "<group>"; };
+		F88470C31AB0C2E20019756B /* Validation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Validation.swift; sourceTree = "<group>"; };
 		F88484D01AADE87000CC9498 /* LoadingCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoadingCell.xib; sourceTree = "<group>"; };
 		F8901BBC1AA792AC009D0790 /* Barrie2Book.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Barrie2Book.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8901BC01AA792AC009D0790 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -181,6 +183,7 @@
 			isa = PBXGroup;
 			children = (
 				F8901C1A1AA7F895009D0790 /* UserViewController.swift */,
+				F88470C31AB0C2E20019756B /* Validation.swift */,
 			);
 			name = User;
 			sourceTree = "<group>";
@@ -290,6 +293,7 @@
 			files = (
 				F8901BEB1AA793AA009D0790 /* SearchViewController.swift in Sources */,
 				F8775C2B1AA8D5FD009BD8EC /* Searcher.swift in Sources */,
+				F88470C41AB0C2E20019756B /* Validation.swift in Sources */,
 				F8901C1B1AA7F895009D0790 /* UserViewController.swift in Sources */,
 				F8901C211AA803ED009D0790 /* SearchResultCell.swift in Sources */,
 				F8775C291AA8CFEF009BD8EC /* Owners.swift in Sources */,

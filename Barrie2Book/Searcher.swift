@@ -69,6 +69,7 @@ class Searcher {
                                 books.degree = "\(degree)% new"
                             }
                             books.price = singleDict["price"] as? String
+                            books.type =  singleDict["type"] as? String
                             resultBooks.append(books)
                         }
                     }
@@ -91,6 +92,7 @@ class Searcher {
 //                                }
                             }
                             books.owner = singleDict["owner"] as? String
+                            books.type =  singleDict["type"] as? String
                             resultBooks.append(books)
                         }
                     }

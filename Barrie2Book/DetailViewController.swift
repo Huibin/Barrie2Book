@@ -30,6 +30,11 @@ class DetailViewController: UIViewController {
         modalPresentationStyle = .Custom
         transitioningDelegate = self
     }
+
+    //stop download task for book cover image
+    deinit {
+        downloadTask?.cancel()
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -100,6 +105,15 @@ class DetailViewController: UIViewController {
         } else {
             priceButton.setTitle("tell me", forState: .Normal)
         }
+    }
+    
+    //send email
+    @IBAction func sendEmail(sender: UIButton) {
+        let title = "exchange book '\(book.title)'".stringByAddingPercentEscapesUsingEncoding(
+            NSUTF8StringEncoding)!
+        let email = "\(book.owner)?&subject=\(title)"
+        let url = NSURL(string: "mailto:\(email)")
+        UIApplication.sharedApplication().openURL(url!)
     }
     
     //close popup view
