@@ -21,6 +21,9 @@
 		F8901C1B1AA7F895009D0790 /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8901C1A1AA7F895009D0790 /* UserViewController.swift */; };
 		F8901C211AA803ED009D0790 /* SearchResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8901C201AA803ED009D0790 /* SearchResultCell.swift */; };
 		F8901C271AA807E4009D0790 /* SearchResultCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F8901C261AA807E4009D0790 /* SearchResultCell.xib */; };
+		F8AEFD4F1AAF11A200F0CCDA /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8AEFD4E1AAF11A200F0CCDA /* DetailViewController.swift */; };
+		F8AEFD511AAF1D2800F0CCDA /* DimmingPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8AEFD501AAF1D2800F0CCDA /* DimmingPresentationController.swift */; };
+		F8AEFD531AAF27B300F0CCDA /* SlideOutAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8AEFD521AAF27B300F0CCDA /* SlideOutAnimationController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +55,9 @@
 		F8901C1A1AA7F895009D0790 /* UserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
 		F8901C201AA803ED009D0790 /* SearchResultCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResultCell.swift; sourceTree = "<group>"; };
 		F8901C261AA807E4009D0790 /* SearchResultCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchResultCell.xib; sourceTree = "<group>"; };
+		F8AEFD4E1AAF11A200F0CCDA /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		F8AEFD501AAF1D2800F0CCDA /* DimmingPresentationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DimmingPresentationController.swift; sourceTree = "<group>"; };
+		F8AEFD521AAF27B300F0CCDA /* SlideOutAnimationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlideOutAnimationController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -164,6 +170,9 @@
 				F8901BEA1AA793AA009D0790 /* SearchViewController.swift */,
 				F8901C201AA803ED009D0790 /* SearchResultCell.swift */,
 				F8775C2A1AA8D5FD009BD8EC /* Searcher.swift */,
+				F8AEFD4E1AAF11A200F0CCDA /* DetailViewController.swift */,
+				F8AEFD501AAF1D2800F0CCDA /* DimmingPresentationController.swift */,
+				F8AEFD521AAF27B300F0CCDA /* SlideOutAnimationController.swift */,
 			);
 			name = Trade;
 			sourceTree = "<group>";
@@ -286,6 +295,9 @@
 				F8775C291AA8CFEF009BD8EC /* Owners.swift in Sources */,
 				F8901BC21AA792AC009D0790 /* AppDelegate.swift in Sources */,
 				F8775C271AA8CFC6009BD8EC /* Books.swift in Sources */,
+				F8AEFD4F1AAF11A200F0CCDA /* DetailViewController.swift in Sources */,
+				F8AEFD511AAF1D2800F0CCDA /* DimmingPresentationController.swift in Sources */,
+				F8AEFD531AAF27B300F0CCDA /* SlideOutAnimationController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

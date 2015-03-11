@@ -16,7 +16,7 @@ struct Books {
     var author: String!
     var publisher: String!
     var imageUrl: String!
-    var image: UIImage!
+//    var image: UIImage!
 
     var type: String!      // sell, need, keep
     var degree: String! // 80% new

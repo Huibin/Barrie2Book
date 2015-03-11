@@ -59,10 +59,10 @@ class Searcher {
                             books.author = singleDict["author"] as? String
                             if let url = singleDict["cover"] as? String {
                                 books.imageUrl = "http://mycodeleaf.com/BookFinder/cover/\(url)"
-                                let imageData = NSData(contentsOfURL: NSURL(string: books.imageUrl)!)
-                                if imageData != nil {
-                                    books.image = UIImage(data: imageData!)
-                                }
+//                                let imageData = NSData(contentsOfURL: NSURL(string: books.imageUrl)!)
+//                                if imageData != nil {
+//                                    books.image = UIImage(data: imageData!)
+//                                }
                             }
                             books.owner = singleDict["owner"] as? String
                             if let degree = singleDict["degree"] as? String {
@@ -80,14 +80,15 @@ class Searcher {
                         if let singleDict = singleDict as? [String: AnyObject] {
                             var books = Books(title: singleDict["title"] as String)
                             books.ISBN = singleDict["ISBN"] as? String
+                            books.edition = singleDict["edition"] as? String
                             books.author = singleDict["author"] as? String
                             let url = singleDict["cover"] as? String
                             if let url = singleDict["cover"] as? String {
                                 books.imageUrl = "http://mycodeleaf.com/BookFinder/cover/\(url)"
-                                let imageData = NSData(contentsOfURL: NSURL(string: books.imageUrl)!)
-                                if imageData != nil {
-                                    books.image = UIImage(data: imageData!)
-                                }
+//                                let imageData = NSData(contentsOfURL: NSURL(string: books.imageUrl)!)
+//                                if imageData != nil {
+//                                    books.image = UIImage(data: imageData!)
+//                                }
                             }
                             books.owner = singleDict["owner"] as? String
                             resultBooks.append(books)

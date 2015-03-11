@@ -50,11 +50,6 @@ class SearchViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func resignKeyboard(sender: UITapGestureRecognizer) {
-        searchBar.resignFirstResponder()
-    }
-    
-    
     //pop alert to show error
     func showAlert(titleStr: String, _ messageStr: String) {
         let alert = UIAlertController(title: titleStr, message: messageStr,preferredStyle: .Alert)
@@ -112,13 +107,19 @@ class SearchViewController: UIViewController {
         reloadBooks(searchBar.text, searchType)
     }
     
-    /*
-    // MARK: - Navigation
+
+//MARK: - Navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        if segue.identifier == "ShowDetail" {
+            let detailViewController = segue.destinationViewController as DetailViewController
+//            if let indexPath = searchTableView.indexPathForSelectedRow() {
+//                detailViewController.book = books[indexPath.row]
+//            }
+            let indexPath = sender as NSIndexPath
+            let book = books[indexPath.row]
+            detailViewController.book = book
+        }
     }
-    */
 }
 
 //MARK: - Search Bar
@@ -167,6 +168,7 @@ extension SearchViewController: UITableViewDataSource {
 extension SearchViewController: UITableViewDelegate {
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
+        performSegueWithIdentifier("ShowDetail", sender: indexPath)
     }
     
     func tableView(tableView: UITableView, willSelectRowAtIndexPath indexPath: NSIndexPath) -> NSIndexPath? {

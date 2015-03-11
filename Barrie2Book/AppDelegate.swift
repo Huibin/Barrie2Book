@@ -20,8 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UISearchBar.appearance().barTintColor = barTintColor
 //        UINavigationBar.appearance().barTintColor = barTintColor
         //window color
-        window!.tintColor = UIColor(red: 103/255, green: 153/255, blue: 170/255, alpha: 1)
-//            UIColor(red: 13/255, green: 26/255, blue: 35/255, alpha: 1)
+        window!.tintColor = UIColor(red: 13/255, green: 26/255, blue: 35/255, alpha: 0.9)
     }
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
