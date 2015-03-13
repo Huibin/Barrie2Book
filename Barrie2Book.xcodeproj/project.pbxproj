@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F81B9FF21AB223F600202056 /* UserCenterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F81B9FF11AB223F600202056 /* UserCenterViewController.swift */; };
+		F81B9FF41AB2244500202056 /* BookCenterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F81B9FF31AB2244500202056 /* BookCenterViewController.swift */; };
+		F81B9FF61AB2246200202056 /* BookManageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F81B9FF51AB2246200202056 /* BookManageViewController.swift */; };
+		F85C18AA1AB37D9000140C7F /* SignupLoginCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F85C18A91AB37D9000140C7F /* SignupLoginCell.xib */; };
+		F85C18AE1AB37F8E00140C7F /* SignupLoginCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F85C18AD1AB37F8E00140C7F /* SignupLoginCell.swift */; };
 		F8775C231AA8B7E2009BD8EC /* NothingFoundCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F8775C221AA8B7E2009BD8EC /* NothingFoundCell.xib */; };
 		F8775C271AA8CFC6009BD8EC /* Books.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8775C261AA8CFC6009BD8EC /* Books.swift */; };
 		F8775C291AA8CFEF009BD8EC /* Owners.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8775C281AA8CFEF009BD8EC /* Owners.swift */; };
@@ -21,7 +26,6 @@
 		F8901BCC1AA792AC009D0790 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = F8901BCA1AA792AC009D0790 /* LaunchScreen.xib */; };
 		F8901BD81AA792AD009D0790 /* Barrie2BookTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8901BD71AA792AD009D0790 /* Barrie2BookTests.swift */; };
 		F8901BEB1AA793AA009D0790 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8901BEA1AA793AA009D0790 /* SearchViewController.swift */; };
-		F8901C1B1AA7F895009D0790 /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8901C1A1AA7F895009D0790 /* UserViewController.swift */; };
 		F8901C211AA803ED009D0790 /* SearchResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8901C201AA803ED009D0790 /* SearchResultCell.swift */; };
 		F8901C271AA807E4009D0790 /* SearchResultCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F8901C261AA807E4009D0790 /* SearchResultCell.xib */; };
 		F8AEFD4F1AAF11A200F0CCDA /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8AEFD4E1AAF11A200F0CCDA /* DetailViewController.swift */; };
@@ -40,6 +44,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F81B9FF11AB223F600202056 /* UserCenterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserCenterViewController.swift; sourceTree = "<group>"; };
+		F81B9FF31AB2244500202056 /* BookCenterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookCenterViewController.swift; sourceTree = "<group>"; };
+		F81B9FF51AB2246200202056 /* BookManageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookManageViewController.swift; sourceTree = "<group>"; };
+		F85C18A91AB37D9000140C7F /* SignupLoginCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SignupLoginCell.xib; sourceTree = "<group>"; };
+		F85C18AD1AB37F8E00140C7F /* SignupLoginCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignupLoginCell.swift; sourceTree = "<group>"; };
 		F8775C221AA8B7E2009BD8EC /* NothingFoundCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NothingFoundCell.xib; sourceTree = "<group>"; };
 		F8775C261AA8CFC6009BD8EC /* Books.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Books.swift; sourceTree = "<group>"; };
 		F8775C281AA8CFEF009BD8EC /* Owners.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Owners.swift; sourceTree = "<group>"; };
@@ -58,7 +67,6 @@
 		F8901BD61AA792AD009D0790 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F8901BD71AA792AD009D0790 /* Barrie2BookTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Barrie2BookTests.swift; sourceTree = "<group>"; };
 		F8901BEA1AA793AA009D0790 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
-		F8901C1A1AA7F895009D0790 /* UserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
 		F8901C201AA803ED009D0790 /* SearchResultCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResultCell.swift; sourceTree = "<group>"; };
 		F8901C261AA807E4009D0790 /* SearchResultCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchResultCell.xib; sourceTree = "<group>"; };
 		F8AEFD4E1AAF11A200F0CCDA /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
@@ -147,6 +155,7 @@
 				F88484D01AADE87000CC9498 /* LoadingCell.xib */,
 				F8901C261AA807E4009D0790 /* SearchResultCell.xib */,
 				F8775C221AA8B7E2009BD8EC /* NothingFoundCell.xib */,
+				F85C18A91AB37D9000140C7F /* SignupLoginCell.xib */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -188,8 +197,11 @@
 		F8901C1D1AA7F8B0009D0790 /* User */ = {
 			isa = PBXGroup;
 			children = (
-				F8901C1A1AA7F895009D0790 /* UserViewController.swift */,
 				F88470C31AB0C2E20019756B /* Validation.swift */,
+				F85C18AD1AB37F8E00140C7F /* SignupLoginCell.swift */,
+				F81B9FF11AB223F600202056 /* UserCenterViewController.swift */,
+				F81B9FF31AB2244500202056 /* BookCenterViewController.swift */,
+				F81B9FF51AB2246200202056 /* BookManageViewController.swift */,
 			);
 			name = User;
 			sourceTree = "<group>";
@@ -276,6 +288,7 @@
 			files = (
 				F8901BC71AA792AC009D0790 /* Main.storyboard in Resources */,
 				F8901BCC1AA792AC009D0790 /* LaunchScreen.xib in Resources */,
+				F85C18AA1AB37D9000140C7F /* SignupLoginCell.xib in Resources */,
 				F88484D11AADE87000CC9498 /* LoadingCell.xib in Resources */,
 				F8901C271AA807E4009D0790 /* SearchResultCell.xib in Resources */,
 				F8775C231AA8B7E2009BD8EC /* NothingFoundCell.xib in Resources */,
@@ -297,18 +310,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F81B9FF41AB2244500202056 /* BookCenterViewController.swift in Sources */,
 				F8901BEB1AA793AA009D0790 /* SearchViewController.swift in Sources */,
 				F8775C2B1AA8D5FD009BD8EC /* Searcher.swift in Sources */,
 				F88470C61AB0E2AC0019756B /* GradientView.swift in Sources */,
+				F85C18AE1AB37F8E00140C7F /* SignupLoginCell.swift in Sources */,
 				F88470C41AB0C2E20019756B /* Validation.swift in Sources */,
-				F8901C1B1AA7F895009D0790 /* UserViewController.swift in Sources */,
 				F8901C211AA803ED009D0790 /* SearchResultCell.swift in Sources */,
 				F8775C291AA8CFEF009BD8EC /* Owners.swift in Sources */,
 				F8901BC21AA792AC009D0790 /* AppDelegate.swift in Sources */,
 				F8775C271AA8CFC6009BD8EC /* Books.swift in Sources */,
 				F8AEFD4F1AAF11A200F0CCDA /* DetailViewController.swift in Sources */,
+				F81B9FF21AB223F600202056 /* UserCenterViewController.swift in Sources */,
 				F88470C81AB0E72C0019756B /* BounceAnimationController.swift in Sources */,
 				F8AEFD511AAF1D2800F0CCDA /* DimmingPresentationController.swift in Sources */,
+				F81B9FF61AB2246200202056 /* BookManageViewController.swift in Sources */,
 				F8AEFD531AAF27B300F0CCDA /* SlideOutAnimationController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

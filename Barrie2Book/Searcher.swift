@@ -18,12 +18,37 @@ class Searcher {
         searchText.stringByAddingPercentEscapesUsingEncoding(
             NSUTF8StringEncoding)!
         let urlString = "http://mycodeleaf.com/BookFinder/search.php?term=\(escapedSearchText)&type=\(searchType)"
-//                let urlString = "http://mycodeleaf.com/BookFinder/search.php?term=\(escapedSearchText)&type=1"
         let url = NSURL(string: urlString)
         return url!
     }
     
-    //internet request: (in subsequence)
+    //return sell book url
+    class func urlWithSellBookText(title: String, _ author: String, _ edition: String, _ owner: String, _ degree: String, _ price: String, _ type: Int, _ delete: Int) -> NSURL {
+        let titleText =
+        title.stringByAddingPercentEscapesUsingEncoding(
+            NSUTF8StringEncoding)!
+        let authorText =
+        author.stringByAddingPercentEscapesUsingEncoding(
+            NSUTF8StringEncoding)!
+        let urlString = "http://mycodeleaf.com/BookFinder/sellbook.php?title=\(titleText)&author=\(authorText)&edition=\(edition)&owner=\(owner)&degree=\(degree)&price=\(price)&type=\(type)&del=\(delete)"
+        let url = NSURL(string: urlString)
+        return url!
+    }
+    
+    //return need book url
+    class func urlWithNeedBookText(title: String, _ author: String, _ edition: String, _ owner: String, _ type: Int, _ delete: Int) -> NSURL {
+        let titleText =
+        title.stringByAddingPercentEscapesUsingEncoding(
+            NSUTF8StringEncoding)!
+        let authorText =
+        author.stringByAddingPercentEscapesUsingEncoding(
+            NSUTF8StringEncoding)!
+        let urlString = "http://mycodeleaf.com/BookFinder/needbook.php?title=\(titleText)&author=\(authorText)&edition=\(edition)&owner=\(owner)&type=\(type)&del=\(delete)"
+        let url = NSURL(string: urlString)
+        return url!
+    }
+    
+    //internet request: replaced by NSURLSession
     class func performRequestWithURL(url: NSURL) -> String? {
         var error: NSError?
         if let resultString = String(contentsOfURL: url,
@@ -33,6 +58,8 @@ class Searcher {
             return nil
         }
     }
+    
+    
     
     //parse JSON
     class func parseJSON(data: NSData) -> [String: AnyObject]? {
