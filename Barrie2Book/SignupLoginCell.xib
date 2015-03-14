@@ -20,17 +20,11 @@
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="emailAddress" returnKeyType="done"/>
-                        <connections>
-                            <action selector="finishInput:" destination="399-du-DpZ" eventType="editingDidEnd" id="0JR-SA-mkL"/>
-                        </connections>
                     </textField>
                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Pfd-nB-xts">
                         <rect key="frame" x="162" y="12" width="146" height="30"/>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="done"/>
-                        <connections>
-                            <action selector="finishInput:" destination="399-du-DpZ" eventType="editingDidEnd" id="0n8-uu-UZe"/>
-                        </connections>
                     </textField>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3vU-fh-xrZ">
                         <rect key="frame" x="39" y="46" width="43" height="30"/>

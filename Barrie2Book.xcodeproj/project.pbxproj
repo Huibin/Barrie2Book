@@ -12,6 +12,7 @@
 		F81B9FF61AB2246200202056 /* BookManageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F81B9FF51AB2246200202056 /* BookManageViewController.swift */; };
 		F85C18AA1AB37D9000140C7F /* SignupLoginCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F85C18A91AB37D9000140C7F /* SignupLoginCell.xib */; };
 		F85C18AE1AB37F8E00140C7F /* SignupLoginCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F85C18AD1AB37F8E00140C7F /* SignupLoginCell.swift */; };
+		F8606BCD1AB4D96900106C2B /* UserValidationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8606BCC1AB4D96900106C2B /* UserValidationViewController.swift */; };
 		F8775C231AA8B7E2009BD8EC /* NothingFoundCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F8775C221AA8B7E2009BD8EC /* NothingFoundCell.xib */; };
 		F8775C271AA8CFC6009BD8EC /* Books.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8775C261AA8CFC6009BD8EC /* Books.swift */; };
 		F8775C291AA8CFEF009BD8EC /* Owners.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8775C281AA8CFEF009BD8EC /* Owners.swift */; };
@@ -49,6 +50,7 @@
 		F81B9FF51AB2246200202056 /* BookManageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookManageViewController.swift; sourceTree = "<group>"; };
 		F85C18A91AB37D9000140C7F /* SignupLoginCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SignupLoginCell.xib; sourceTree = "<group>"; };
 		F85C18AD1AB37F8E00140C7F /* SignupLoginCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignupLoginCell.swift; sourceTree = "<group>"; };
+		F8606BCC1AB4D96900106C2B /* UserValidationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserValidationViewController.swift; sourceTree = "<group>"; };
 		F8775C221AA8B7E2009BD8EC /* NothingFoundCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NothingFoundCell.xib; sourceTree = "<group>"; };
 		F8775C261AA8CFC6009BD8EC /* Books.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Books.swift; sourceTree = "<group>"; };
 		F8775C281AA8CFEF009BD8EC /* Owners.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Owners.swift; sourceTree = "<group>"; };
@@ -198,6 +200,7 @@
 			isa = PBXGroup;
 			children = (
 				F88470C31AB0C2E20019756B /* Validation.swift */,
+				F8606BCC1AB4D96900106C2B /* UserValidationViewController.swift */,
 				F85C18AD1AB37F8E00140C7F /* SignupLoginCell.swift */,
 				F81B9FF11AB223F600202056 /* UserCenterViewController.swift */,
 				F81B9FF31AB2244500202056 /* BookCenterViewController.swift */,
@@ -324,6 +327,7 @@
 				F81B9FF21AB223F600202056 /* UserCenterViewController.swift in Sources */,
 				F88470C81AB0E72C0019756B /* BounceAnimationController.swift in Sources */,
 				F8AEFD511AAF1D2800F0CCDA /* DimmingPresentationController.swift in Sources */,
+				F8606BCD1AB4D96900106C2B /* UserValidationViewController.swift in Sources */,
 				F81B9FF61AB2246200202056 /* BookManageViewController.swift in Sources */,
 				F8AEFD531AAF27B300F0CCDA /* SlideOutAnimationController.swift in Sources */,
 			);

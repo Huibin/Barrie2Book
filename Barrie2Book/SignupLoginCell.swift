@@ -30,14 +30,15 @@ class SignupLoginCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
     }
     
-
-    @IBAction func finishInput(sender: UITextField) {
-        sender.resignFirstResponder()
-        println("end")
+    override func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
+        self.endEditing(true)
     }
+
+
     
     @IBAction func login(sender: UIButton) {
-        println("login")
+        println(username.text)
+        username.resignFirstResponder()
     }
     
     @IBAction func remind(sender: UIButton) {
@@ -48,7 +49,5 @@ class SignupLoginCell: UITableViewCell {
         println("signup")
     }
     
-    func performValidation() {
-        
-    }
+ 
 }

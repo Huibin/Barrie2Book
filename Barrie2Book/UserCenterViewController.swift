@@ -8,7 +8,7 @@
 
 import UIKit
 
-class UserCenterViewController: UITableViewController {
+class UserCenterViewController: UITableViewController, UITextFieldDelegate {
 
     @IBOutlet weak var loginLabel: UILabel!
     @IBOutlet weak var booksLabel: UILabel!
@@ -18,53 +18,72 @@ class UserCenterViewController: UITableViewController {
             logTag != logTag
         }
     }
-    var logTag = true;
+    var logTag: Bool = true {
+        didSet {
+            tableView.reloadData()
+        }
+    };
     
-    struct TableViewCellIdentifiers {
-        static let SignupLoginCell = "SignupLoginCell"
-        static let LoginCell = "LoginCell"
-        static let BooksCell = "BooksCell"
-    }
+//    struct TableViewCellIdentifiers {
+//        static let SignupLoginCell = "SignupLoginCell"
+//        static let LoginCell = "LoginCell"
+//        static let BooksCell = "BooksCell"
+//    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //custom color 
+        
+        //custom tint color in tableview controller
         tableView.tintColor = UIColor(red: 103/255, green: 153/255, blue: 170/255, alpha: 1)
-        //registe custom table cell
-        var cellNib = UINib(nibName: TableViewCellIdentifiers.SignupLoginCell, bundle: nil)
-        tableView.registerNib(cellNib, forCellReuseIdentifier: TableViewCellIdentifiers.SignupLoginCell)
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    func textFieldShouldReturn(textField: UITextField) {
+        textField.resignFirstResponder()
+    }
 
-    // MARK: - Table view data source
+    //pop alert from center
+    func showGeneralAlert(titleStr: String, _ messageStr: String) {
+        let alert = UIAlertController(title: titleStr, message: messageStr,preferredStyle: .Alert)
+        let action = UIAlertAction(title: "OK", style: .Default, handler: nil)
+        alert.addAction(action)
+        self.presentViewController(alert, animated: true, completion: nil)
+    }
+    
+    //pop log out alert
+    func showLogoutAlert() {
+        let controller = UIAlertController(title: nil, message: nil, preferredStyle:.ActionSheet)
+        let logoutAction = UIAlertAction(title: "Log Out", style: .Destructive, handler: { action in
+            self.logTag = false
+        })
+        controller.addAction(logoutAction)
+        let cancelAction = UIAlertAction(title: "Cancel", style: .Cancel, handler: nil)
+        controller.addAction(cancelAction)
+        presentViewController(controller, animated: true, completion: nil)
+    }
+    
+// MARK: - Table view data source
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 2
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if section == 0 && user != nil {
+        if section == 0 && logTag == true {
             return 1
         } else {
             return super.tableView(tableView, numberOfRowsInSection: section)
-        }
-    }
-
-    override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        if indexPath.section == 0 && indexPath.row == 1 {
-            return 82
-        } else {
-            return super.tableView(tableView, heightForRowAtIndexPath: indexPath)
         }
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
         var cell = super.tableView(tableView, cellForRowAtIndexPath: indexPath)
+        
         //custom selected cell color
         let selectedView = UIView(frame: CGRect.zeroRect)
         selectedView.backgroundColor = UIColor(red: 20/255, green: 160/255, blue: 160/255, alpha: 0.5)
@@ -75,21 +94,21 @@ class UserCenterViewController: UITableViewController {
             cell.imageView?.image = UIImage(named: imageName)
             loginLabel.text = logTag ? "username" : "unkown user"
             loginLabel.textColor = logTag ? UIColor.blackColor(): UIColor.lightGrayColor()
-            
-        } else if indexPath.section == 0 && indexPath.row == 1 {
-            cell = tableView.dequeueReusableCellWithIdentifier(TableViewCellIdentifiers.SignupLoginCell, forIndexPath: indexPath) as SignupLoginCell
         } else if indexPath.section == 1 {
             cell.imageView?.image = UIImage(named: "history")
             booksLabel.text = "manage your own books"
             booksLabel.textColor = logTag ? UIColor.blackColor(): UIColor.lightGrayColor()
         }
-    
+        
         return cell
+
     }
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
-        if indexPath.section == 1 {
+        if indexPath.section == 0 && indexPath.row == 0 {
+            showLogoutAlert()
+        } else if indexPath.section == 1 {
             performSegueWithIdentifier("ShowBookCenter", sender: tableView)
         }
     }
