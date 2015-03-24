@@ -8,33 +8,37 @@
 
 import UIKit
 
-class UserCenterViewController: UITableViewController, UITextFieldDelegate {
+class UserCenterViewController: UITableViewController {
 
     @IBOutlet weak var loginLabel: UILabel!
     @IBOutlet weak var booksLabel: UILabel!
     
-    var user: Owners! {
-        didSet {
-            logTag != logTag
+    @IBOutlet weak var loginButton: UIButton!
+    @IBOutlet weak var signupButton: UIButton!
+    @IBOutlet weak var remindButton: UIButton!
+    
+    var owner: String! {
+        get {
+            return NSUserDefaults.standardUserDefaults().stringForKey("username")
+        }
+        set {
+            NSUserDefaults.standardUserDefaults().setObject(newValue, forKey: "username")
+            NSUserDefaults.standardUserDefaults().synchronize()
+            logTag = true
         }
     }
-    var logTag: Bool = true {
+    var logTag: Bool = false {
         didSet {
             tableView.reloadData()
         }
-    };
-    
-//    struct TableViewCellIdentifiers {
-//        static let SignupLoginCell = "SignupLoginCell"
-//        static let LoginCell = "LoginCell"
-//        static let BooksCell = "BooksCell"
-//    }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         //custom tint color in tableview controller
         tableView.tintColor = UIColor(red: 103/255, green: 153/255, blue: 170/255, alpha: 1)
+        
+        logTag = owner != nil ? true: false
     }
 
     override func didReceiveMemoryWarning() {
@@ -42,14 +46,13 @@ class UserCenterViewController: UITableViewController, UITextFieldDelegate {
         // Dispose of any resources that can be recreated.
     }
     
-    func textFieldShouldReturn(textField: UITextField) {
-        textField.resignFirstResponder()
-    }
 
+//MARK: - Alert
     //pop alert from center
     func showGeneralAlert(titleStr: String, _ messageStr: String) {
         let alert = UIAlertController(title: titleStr, message: messageStr,preferredStyle: .Alert)
         let action = UIAlertAction(title: "OK", style: .Default, handler: nil)
+        alert.view.tintColor = UIColor(red: 103/255, green: 153/255, blue: 170/255, alpha: 1)
         alert.addAction(action)
         self.presentViewController(alert, animated: true, completion: nil)
     }
@@ -57,7 +60,13 @@ class UserCenterViewController: UITableViewController, UITextFieldDelegate {
     //pop log out alert
     func showLogoutAlert() {
         let controller = UIAlertController(title: nil, message: nil, preferredStyle:.ActionSheet)
+        controller.view.tintColor = UIColor(red: 103/255, green: 153/255, blue: 170/255, alpha: 1)
+        let changepasswordAction = UIAlertAction(title: "Change Password", style: .Default, handler: { action in
+            self.performSegueWithIdentifier("ShowChange", sender: self)
+        })
+        controller.addAction(changepasswordAction)
         let logoutAction = UIAlertAction(title: "Log Out", style: .Destructive, handler: { action in
+            self.owner = nil
             self.logTag = false
         })
         controller.addAction(logoutAction)
@@ -84,20 +93,21 @@ class UserCenterViewController: UITableViewController, UITextFieldDelegate {
         
         var cell = super.tableView(tableView, cellForRowAtIndexPath: indexPath)
         
-        //custom selected cell color
-        let selectedView = UIView(frame: CGRect.zeroRect)
-        selectedView.backgroundColor = UIColor(red: 20/255, green: 160/255, blue: 160/255, alpha: 0.5)
-        cell.selectedBackgroundView = selectedView
-        
         if indexPath.section == 0 && indexPath.row == 0 {
             let imageName = logTag ? "login" : "unlog"
             cell.imageView?.image = UIImage(named: imageName)
-            loginLabel.text = logTag ? "username" : "unkown user"
+            loginLabel.text = logTag ? owner : "unkown user"
             loginLabel.textColor = logTag ? UIColor.blackColor(): UIColor.lightGrayColor()
+            let selectedView = UIView(frame: CGRect.zeroRect)
+            selectedView.backgroundColor = logTag ? UIColor(red: 20/255, green: 160/255, blue: 160/255, alpha: 0.5) : UIColor.whiteColor()
+            cell.selectedBackgroundView =  selectedView
         } else if indexPath.section == 1 {
             cell.imageView?.image = UIImage(named: "history")
-            booksLabel.text = "manage your own books"
+            booksLabel.text = "manage books"
             booksLabel.textColor = logTag ? UIColor.blackColor(): UIColor.lightGrayColor()
+            let selectedView = UIView(frame: CGRect.zeroRect)
+            selectedView.backgroundColor = logTag ? UIColor(red: 20/255, green: 160/255, blue: 160/255, alpha: 0.5) : UIColor.whiteColor()
+            cell.selectedBackgroundView =  selectedView
         }
         
         return cell
@@ -105,7 +115,9 @@ class UserCenterViewController: UITableViewController, UITextFieldDelegate {
     }
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
+        
         if indexPath.section == 0 && indexPath.row == 0 {
             showLogoutAlert()
         } else if indexPath.section == 1 {
@@ -114,10 +126,10 @@ class UserCenterViewController: UITableViewController, UITextFieldDelegate {
     }
 
     override func tableView(tableView: UITableView, willSelectRowAtIndexPath indexPath: NSIndexPath) -> NSIndexPath? {
-        if (indexPath.section == 0 && indexPath.row == 0 && logTag == false) || (indexPath.section == 1 && logTag == false) {
-            return nil
-        } else {
+        if (indexPath.section == 0 && indexPath.row == 0 && logTag == true) || (indexPath.section == 1 && logTag == true) {
             return indexPath
+        } else {
+            return nil
         }
     }
     /*
@@ -155,19 +167,47 @@ class UserCenterViewController: UITableViewController, UITextFieldDelegate {
     }
     */
 
-    //user validation
-    func userValidation() {
-        
-    }
+// MARK: - Navigation
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using [segue destinationViewController].
-        // Pass the selected object to the new view controller.
+        if let identifier = segue.identifier {
+            switch identifier {
+                case "ShowLogin":
+                    let navigationController = segue.destinationViewController as UINavigationController
+                    let controller = navigationController.topViewController as UserValidationViewController
+                    controller.delegate = self
+                    controller.type = "Log In"
+                case "ShowSignup":
+                    let navigationController = segue.destinationViewController as UINavigationController
+                    let controller = navigationController.topViewController as UserValidationViewController
+                    controller.delegate = self
+                    controller.type = "Sign Up"
+                case "ShowRemind":
+                    let navigationController = segue.destinationViewController as UINavigationController
+                    let controller = navigationController.topViewController as UserValidationViewController
+                    controller.delegate = self
+                    controller.type = "Email Password"
+                case "ShowChange":
+                    let navigationController = segue.destinationViewController as UINavigationController
+                    let controller = navigationController.topViewController as UserValidationViewController
+                    controller.delegate = self
+                    controller.type = "Change Password"
+                    controller.user = owner
+                case "ShowBookCenter":
+                    let navigationController = segue.destinationViewController as UINavigationController
+                    let controller = navigationController.topViewController as BookCenterViewController
+                    controller.user = owner
+                default:
+                    return
+            }
+        }
     }
-    */
 
+}
+
+
+extension UserCenterViewController: UserValidationViewControllerDelegate {
+    func didValidation(controller: UserValidationViewController, _ user: String) {
+        owner = user
+    }
 }

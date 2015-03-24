@@ -20,6 +20,7 @@ class SearchViewController: UIViewController {
         static let nothingFoundCell = "NothingFoundCell"
     }
     
+    var currentType = "1"
     var searchTask: NSURLSessionDataTask?
     var isLoading: Bool = false
     
@@ -29,10 +30,11 @@ class SearchViewController: UIViewController {
         }
     }
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         //table style
-        searchTableView.contentInset = UIEdgeInsets(top: 108, left: 0, bottom: 0, right: 0)
+        searchTableView.contentInset = UIEdgeInsets(top: 108, left: 0, bottom: 49, right: 0)
         searchTableView.rowHeight = 80
         //register table cell
         var cellNib = UINib(nibName: TableViewCellIdentifiers.searchResultCell, bundle: nil)
@@ -42,12 +44,27 @@ class SearchViewController: UIViewController {
         cellNib = UINib(nibName: TableViewCellIdentifiers.loadingCell, bundle: nil)
         searchTableView.registerNib(cellNib, forCellReuseIdentifier: TableViewCellIdentifiers.loadingCell)
 
-        reloadBooks("", "1")
+        reloadBooks("", currentType)
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    }
+
+    
+    //refresh when switch software
+    func applicationWillEnterForeground(notification:NSNotification) {
+        reloadBooks("", currentType)
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        let app = UIApplication.sharedApplication()
+        NSNotificationCenter.defaultCenter().addObserver(self, selector:
+            "applicationWillEnterForeground:",
+            name: UIApplicationWillEnterForegroundNotification,
+            object: app)
+        reloadBooks("", currentType)
     }
     
     //pop alert to show error
@@ -103,10 +120,22 @@ class SearchViewController: UIViewController {
 
     
     @IBAction func changeSearchType(sender: UISegmentedControl) {
-        let searchType = String(sender.selectedSegmentIndex == 0 ? 1 : 0)
-        reloadBooks(searchBar.text, searchType)
+        searchBar.resignFirstResponder()
+        switch sender.selectedSegmentIndex {
+        case 0:
+            currentType = "1"
+        case 1:
+            currentType = "0"
+        default:
+            return
+        }
+        reloadBooks(searchBar.text, currentType)
     }
     
+
+    @IBAction func dismissKeyboard(sender: UITapGestureRecognizer) {
+        searchBar.resignFirstResponder()
+    }
 
 //MARK: - Navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
@@ -148,20 +177,17 @@ extension SearchViewController: UITableViewDataSource {
             let spinner = cell.viewWithTag(100) as UIActivityIndicatorView
             spinner.startAnimating()
             return cell
-        } else {
-            if (books.count == 0) {
+        } else if books.count == 0 {
                 return tableView.dequeueReusableCellWithIdentifier(TableViewCellIdentifiers.nothingFoundCell, forIndexPath: indexPath) as UITableViewCell
-            } else {
+        } else {
                 let cell = tableView.dequeueReusableCellWithIdentifier(TableViewCellIdentifiers.searchResultCell, forIndexPath: indexPath) as SearchResultCell
                 
                 let book = books[indexPath.row]
                 cell.cellConfigue(book)
                 return cell
-            }
         }
     }
-    
-    
+
 }
 
 //MARK: - Table Delegate
@@ -172,7 +198,7 @@ extension SearchViewController: UITableViewDelegate {
     }
     
     func tableView(tableView: UITableView, willSelectRowAtIndexPath indexPath: NSIndexPath) -> NSIndexPath? {
-        if isLoading {
+        if isLoading || books.count == 0 {
             return nil
         } else {
             return indexPath

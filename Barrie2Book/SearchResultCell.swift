@@ -75,6 +75,6 @@ class SearchResultCell: UITableViewCell {
         
         titleLabel.text = nil
         priceLabel.text = nil
-        coverImage.image = nil
+        coverImage.image = UIImage(named: "Placeholder")
     }
 }

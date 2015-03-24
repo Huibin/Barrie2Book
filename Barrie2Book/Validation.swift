@@ -25,8 +25,9 @@ class Validation {
     }
     
     //validate password format
-    func isValidPassword(password: String) -> Bool {
+    class func isValidPassword(password: String) -> Bool {
         let whitespace = NSCharacterSet.whitespaceCharacterSet()
+        
         let range = password.rangeOfCharacterFromSet(whitespace)
         if let test = range {
             return false
@@ -40,11 +41,35 @@ class Validation {
         }
     }
     
+    //validate general input
+    class func isValidInput(input: String) -> Bool {
+//        let whitespace = NSCharacterSet.whitespaceCharacterSet()
+//        let range = input.rangeOfCharacterFromSet(whitespace)
+//        if let test = range {
+//            return false
+//        }
+//        else {
+            if countElements(input) < 1 {
+                return false
+            } else {
+                return true
+            }
+//        }
+    }
+    
     //validate two password 
     func isSamePassword(pwd1: String, pwd2: String) -> Bool {
         return pwd1 == pwd2 ? true: false
     }
     
+    //validate ISBN
+    class func isValidISBN(input: String) -> Bool {
+        if countElements(input) != 10 && countElements(input) != 13 {
+            return false
+        } else {
+            return true
+        }
+    }
     
     //return sign up url: exist, ok, fail
     class func urlWithSignUpText(username: String, _ password: String) -> NSURL {

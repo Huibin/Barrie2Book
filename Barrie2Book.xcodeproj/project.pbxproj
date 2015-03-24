@@ -9,10 +9,11 @@
 /* Begin PBXBuildFile section */
 		F81B9FF21AB223F600202056 /* UserCenterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F81B9FF11AB223F600202056 /* UserCenterViewController.swift */; };
 		F81B9FF41AB2244500202056 /* BookCenterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F81B9FF31AB2244500202056 /* BookCenterViewController.swift */; };
-		F81B9FF61AB2246200202056 /* BookManageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F81B9FF51AB2246200202056 /* BookManageViewController.swift */; };
+		F833A5F11AB6736100B76458 /* HudView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F833A5F01AB6736100B76458 /* HudView.swift */; };
 		F85C18AA1AB37D9000140C7F /* SignupLoginCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F85C18A91AB37D9000140C7F /* SignupLoginCell.xib */; };
-		F85C18AE1AB37F8E00140C7F /* SignupLoginCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F85C18AD1AB37F8E00140C7F /* SignupLoginCell.swift */; };
 		F8606BCD1AB4D96900106C2B /* UserValidationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8606BCC1AB4D96900106C2B /* UserValidationViewController.swift */; };
+		F86EE34B1AB61CD40040B904 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F86EE34A1AB61CD40040B904 /* Main.storyboard */; };
+		F873DCA41AB71F70005BE4A5 /* BookEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F873DCA31AB71F70005BE4A5 /* BookEditViewController.swift */; };
 		F8775C231AA8B7E2009BD8EC /* NothingFoundCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F8775C221AA8B7E2009BD8EC /* NothingFoundCell.xib */; };
 		F8775C271AA8CFC6009BD8EC /* Books.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8775C261AA8CFC6009BD8EC /* Books.swift */; };
 		F8775C291AA8CFEF009BD8EC /* Owners.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8775C281AA8CFEF009BD8EC /* Owners.swift */; };
@@ -22,13 +23,17 @@
 		F88470C81AB0E72C0019756B /* BounceAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F88470C71AB0E72C0019756B /* BounceAnimationController.swift */; };
 		F88484D11AADE87000CC9498 /* LoadingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F88484D01AADE87000CC9498 /* LoadingCell.xib */; };
 		F8901BC21AA792AC009D0790 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8901BC11AA792AC009D0790 /* AppDelegate.swift */; };
-		F8901BC71AA792AC009D0790 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F8901BC51AA792AC009D0790 /* Main.storyboard */; };
 		F8901BC91AA792AC009D0790 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F8901BC81AA792AC009D0790 /* Images.xcassets */; };
 		F8901BCC1AA792AC009D0790 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = F8901BCA1AA792AC009D0790 /* LaunchScreen.xib */; };
 		F8901BD81AA792AD009D0790 /* Barrie2BookTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8901BD71AA792AD009D0790 /* Barrie2BookTests.swift */; };
 		F8901BEB1AA793AA009D0790 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8901BEA1AA793AA009D0790 /* SearchViewController.swift */; };
 		F8901C211AA803ED009D0790 /* SearchResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8901C201AA803ED009D0790 /* SearchResultCell.swift */; };
 		F8901C271AA807E4009D0790 /* SearchResultCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F8901C261AA807E4009D0790 /* SearchResultCell.xib */; };
+		F8945EC71AC0C38000CAFF8F /* BookInputISBNViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8945EC61AC0C38000CAFF8F /* BookInputISBNViewController.swift */; };
+		F8945EC91AC0E27300CAFF8F /* BarcodeScannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8945EC81AC0E27300CAFF8F /* BarcodeScannerView.swift */; };
+		F8995CB91AC063FB00BB279B /* AddBookCenterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8995CB81AC063FB00BB279B /* AddBookCenterController.swift */; };
+		F8995CBB1AC06CDD00BB279B /* BookISBNViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8995CBA1AC06CDD00BB279B /* BookISBNViewController.swift */; };
+		F8995CBD1AC06CEF00BB279B /* BookInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8995CBC1AC06CEF00BB279B /* BookInfoViewController.swift */; };
 		F8AEFD4F1AAF11A200F0CCDA /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8AEFD4E1AAF11A200F0CCDA /* DetailViewController.swift */; };
 		F8AEFD511AAF1D2800F0CCDA /* DimmingPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8AEFD501AAF1D2800F0CCDA /* DimmingPresentationController.swift */; };
 		F8AEFD531AAF27B300F0CCDA /* SlideOutAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8AEFD521AAF27B300F0CCDA /* SlideOutAnimationController.swift */; };
@@ -47,10 +52,11 @@
 /* Begin PBXFileReference section */
 		F81B9FF11AB223F600202056 /* UserCenterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserCenterViewController.swift; sourceTree = "<group>"; };
 		F81B9FF31AB2244500202056 /* BookCenterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookCenterViewController.swift; sourceTree = "<group>"; };
-		F81B9FF51AB2246200202056 /* BookManageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookManageViewController.swift; sourceTree = "<group>"; };
+		F833A5F01AB6736100B76458 /* HudView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HudView.swift; sourceTree = "<group>"; };
 		F85C18A91AB37D9000140C7F /* SignupLoginCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SignupLoginCell.xib; sourceTree = "<group>"; };
-		F85C18AD1AB37F8E00140C7F /* SignupLoginCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignupLoginCell.swift; sourceTree = "<group>"; };
 		F8606BCC1AB4D96900106C2B /* UserValidationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserValidationViewController.swift; sourceTree = "<group>"; };
+		F86EE34A1AB61CD40040B904 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		F873DCA31AB71F70005BE4A5 /* BookEditViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookEditViewController.swift; sourceTree = "<group>"; };
 		F8775C221AA8B7E2009BD8EC /* NothingFoundCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NothingFoundCell.xib; sourceTree = "<group>"; };
 		F8775C261AA8CFC6009BD8EC /* Books.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Books.swift; sourceTree = "<group>"; };
 		F8775C281AA8CFEF009BD8EC /* Owners.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Owners.swift; sourceTree = "<group>"; };
@@ -62,7 +68,6 @@
 		F8901BBC1AA792AC009D0790 /* Barrie2Book.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Barrie2Book.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8901BC01AA792AC009D0790 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F8901BC11AA792AC009D0790 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F8901BC61AA792AC009D0790 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F8901BC81AA792AC009D0790 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		F8901BCB1AA792AC009D0790 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		F8901BD11AA792AD009D0790 /* Barrie2BookTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Barrie2BookTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -71,6 +76,11 @@
 		F8901BEA1AA793AA009D0790 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		F8901C201AA803ED009D0790 /* SearchResultCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResultCell.swift; sourceTree = "<group>"; };
 		F8901C261AA807E4009D0790 /* SearchResultCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchResultCell.xib; sourceTree = "<group>"; };
+		F8945EC61AC0C38000CAFF8F /* BookInputISBNViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookInputISBNViewController.swift; sourceTree = "<group>"; };
+		F8945EC81AC0E27300CAFF8F /* BarcodeScannerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BarcodeScannerView.swift; sourceTree = "<group>"; };
+		F8995CB81AC063FB00BB279B /* AddBookCenterController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddBookCenterController.swift; sourceTree = "<group>"; };
+		F8995CBA1AC06CDD00BB279B /* BookISBNViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookISBNViewController.swift; sourceTree = "<group>"; };
+		F8995CBC1AC06CEF00BB279B /* BookInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookInfoViewController.swift; sourceTree = "<group>"; };
 		F8AEFD4E1AAF11A200F0CCDA /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		F8AEFD501AAF1D2800F0CCDA /* DimmingPresentationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DimmingPresentationController.swift; sourceTree = "<group>"; };
 		F8AEFD521AAF27B300F0CCDA /* SlideOutAnimationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlideOutAnimationController.swift; sourceTree = "<group>"; };
@@ -153,7 +163,7 @@
 			isa = PBXGroup;
 			children = (
 				F8901BCA1AA792AC009D0790 /* LaunchScreen.xib */,
-				F8901BC51AA792AC009D0790 /* Main.storyboard */,
+				F86EE34A1AB61CD40040B904 /* Main.storyboard */,
 				F88484D01AADE87000CC9498 /* LoadingCell.xib */,
 				F8901C261AA807E4009D0790 /* SearchResultCell.xib */,
 				F8775C221AA8B7E2009BD8EC /* NothingFoundCell.xib */,
@@ -201,10 +211,15 @@
 			children = (
 				F88470C31AB0C2E20019756B /* Validation.swift */,
 				F8606BCC1AB4D96900106C2B /* UserValidationViewController.swift */,
-				F85C18AD1AB37F8E00140C7F /* SignupLoginCell.swift */,
 				F81B9FF11AB223F600202056 /* UserCenterViewController.swift */,
 				F81B9FF31AB2244500202056 /* BookCenterViewController.swift */,
-				F81B9FF51AB2246200202056 /* BookManageViewController.swift */,
+				F873DCA31AB71F70005BE4A5 /* BookEditViewController.swift */,
+				F833A5F01AB6736100B76458 /* HudView.swift */,
+				F8995CB81AC063FB00BB279B /* AddBookCenterController.swift */,
+				F8945EC81AC0E27300CAFF8F /* BarcodeScannerView.swift */,
+				F8995CBA1AC06CDD00BB279B /* BookISBNViewController.swift */,
+				F8945EC61AC0C38000CAFF8F /* BookInputISBNViewController.swift */,
+				F8995CBC1AC06CEF00BB279B /* BookInfoViewController.swift */,
 			);
 			name = User;
 			sourceTree = "<group>";
@@ -258,6 +273,7 @@
 				TargetAttributes = {
 					F8901BBB1AA792AC009D0790 = {
 						CreatedOnToolsVersion = 6.1.1;
+						DevelopmentTeam = E3S6M9LC3X;
 					};
 					F8901BD01AA792AD009D0790 = {
 						CreatedOnToolsVersion = 6.1.1;
@@ -289,7 +305,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F8901BC71AA792AC009D0790 /* Main.storyboard in Resources */,
+				F86EE34B1AB61CD40040B904 /* Main.storyboard in Resources */,
 				F8901BCC1AA792AC009D0790 /* LaunchScreen.xib in Resources */,
 				F85C18AA1AB37D9000140C7F /* SignupLoginCell.xib in Resources */,
 				F88484D11AADE87000CC9498 /* LoadingCell.xib in Resources */,
@@ -316,20 +332,25 @@
 				F81B9FF41AB2244500202056 /* BookCenterViewController.swift in Sources */,
 				F8901BEB1AA793AA009D0790 /* SearchViewController.swift in Sources */,
 				F8775C2B1AA8D5FD009BD8EC /* Searcher.swift in Sources */,
+				F873DCA41AB71F70005BE4A5 /* BookEditViewController.swift in Sources */,
+				F8995CB91AC063FB00BB279B /* AddBookCenterController.swift in Sources */,
 				F88470C61AB0E2AC0019756B /* GradientView.swift in Sources */,
-				F85C18AE1AB37F8E00140C7F /* SignupLoginCell.swift in Sources */,
+				F8995CBD1AC06CEF00BB279B /* BookInfoViewController.swift in Sources */,
+				F8945EC71AC0C38000CAFF8F /* BookInputISBNViewController.swift in Sources */,
 				F88470C41AB0C2E20019756B /* Validation.swift in Sources */,
 				F8901C211AA803ED009D0790 /* SearchResultCell.swift in Sources */,
+				F8995CBB1AC06CDD00BB279B /* BookISBNViewController.swift in Sources */,
 				F8775C291AA8CFEF009BD8EC /* Owners.swift in Sources */,
 				F8901BC21AA792AC009D0790 /* AppDelegate.swift in Sources */,
 				F8775C271AA8CFC6009BD8EC /* Books.swift in Sources */,
 				F8AEFD4F1AAF11A200F0CCDA /* DetailViewController.swift in Sources */,
 				F81B9FF21AB223F600202056 /* UserCenterViewController.swift in Sources */,
 				F88470C81AB0E72C0019756B /* BounceAnimationController.swift in Sources */,
+				F8945EC91AC0E27300CAFF8F /* BarcodeScannerView.swift in Sources */,
 				F8AEFD511AAF1D2800F0CCDA /* DimmingPresentationController.swift in Sources */,
 				F8606BCD1AB4D96900106C2B /* UserValidationViewController.swift in Sources */,
-				F81B9FF61AB2246200202056 /* BookManageViewController.swift in Sources */,
 				F8AEFD531AAF27B300F0CCDA /* SlideOutAnimationController.swift in Sources */,
+				F833A5F11AB6736100B76458 /* HudView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -352,14 +373,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		F8901BC51AA792AC009D0790 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				F8901BC61AA792AC009D0790 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		F8901BCA1AA792AC009D0790 /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -388,6 +401,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -405,9 +419,10 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "5431bf2c-3f0d-4255-9abe-a7347ec89371";
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -430,6 +445,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
@@ -441,8 +457,9 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				PROVISIONING_PROFILE = "5431bf2c-3f0d-4255-9abe-a7347ec89371";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -452,9 +469,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Barrie2Book/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "5431bf2c-3f0d-4255-9abe-a7347ec89371";
 			};
 			name = Debug;
 		};
@@ -462,9 +483,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Barrie2Book/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "5431bf2c-3f0d-4255-9abe-a7347ec89371";
 			};
 			name = Release;
 		};
@@ -502,6 +527,72 @@
 			};
 			name = Release;
 		};
+		F8F784D01AB9C9E600EB1170 /* Distribution */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PROVISIONING_PROFILE = "5431bf2c-3f0d-4255-9abe-a7347ec89371";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Distribution;
+		};
+		F8F784D11AB9C9E600EB1170 /* Distribution */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = Barrie2Book/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "5431bf2c-3f0d-4255-9abe-a7347ec89371";
+			};
+			name = Distribution;
+		};
+		F8F784D21AB9C9E600EB1170 /* Distribution */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = Barrie2BookTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Barrie2Book.app/Barrie2Book";
+			};
+			name = Distribution;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -510,6 +601,7 @@
 			buildConfigurations = (
 				F8901BD91AA792AD009D0790 /* Debug */,
 				F8901BDA1AA792AD009D0790 /* Release */,
+				F8F784D01AB9C9E600EB1170 /* Distribution */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -519,6 +611,7 @@
 			buildConfigurations = (
 				F8901BDC1AA792AD009D0790 /* Debug */,
 				F8901BDD1AA792AD009D0790 /* Release */,
+				F8F784D11AB9C9E600EB1170 /* Distribution */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -528,6 +621,7 @@
 			buildConfigurations = (
 				F8901BDF1AA792AD009D0790 /* Debug */,
 				F8901BE01AA792AD009D0790 /* Release */,
+				F8F784D21AB9C9E600EB1170 /* Distribution */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
